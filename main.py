@@ -21,8 +21,10 @@ class GetSysInformation:
         self.CONST_OS_SUBKEY = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
         self.CONST_PROC_SUBKEY = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0"
         self.CONST_SW_SUBKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
+        self.mysys = platform.system()
 
-    def get_registry_value(self, key, subkey, value):
+    @staticmethod
+    def get_registry_value(key, subkey, value):
 
         key = getattr(_winreg, key)
         handle = _winreg.OpenKey(key, subkey)
@@ -31,33 +33,41 @@ class GetSysInformation:
 
     def getsysinfo(self):
 
-        mysys = platform.system()
-        if mysys == 'Windows':
-            import uuid
-            serno = uuid.UUID(int=uuid.getnode())
-            res = self.getwininfo()
-            os = res[0]
-            osbuild = res[1]
-            CompName = win32api.GetComputerName()
-            DomainName = win32api.GetDomainName()
-            UserName = win32api.GetUserName()
-            return os, osbuild, serno, CompName, DomainName, UserName
-        elif mysys == 'Linux':
+        if self.mysys == 'Windows':
+            self.getwininfo()
+        elif self.mysys == 'Linux':
             self.getlinuxinfo()
-        elif mysys == 'Darwin':
-            self.getmacinfo
+        elif self.mysys == 'Darwin':
+            self.getmacinfo()
         else:
             print "OS Not Supported"
 
     def getwininfo(self):
-        res = self.os_version()
-        return res
+        import uuid
+        import platform
+        # from subprocess import Popen, PIPE, STDOUT
+        # p = Popen(['C:\\Windows\\system32\\manage-bde.exe', '-status'], stdout=PIPE, stderr=STDOUT, shell=True)
+        # lines = p.stdout.readlines()
+        # for line in lines:
+        #     print line
+        self.serno = uuid.UUID(int=uuid.getnode())
+        self.CompName = win32api.GetComputerName()
+        self.DomainName = win32api.GetDomainName()
+        self.UserName = win32api.GetUserName()
+        self.drives = win32api.GetLogicalDriveStrings()
+        # mon = win32api.GetMonitorInfo()
+        # sinfo =  win32api.GetSystemInfo()
+        # regq = win32api.RegQueryInfoKey()
+        self.processor = platform.processor()
+        self.platform = platform.platform()
+        # return os, osbuild, serno, CompName, DomainName, UserName, drives, processor, platform
 
     def getlinuxinfo(self):
         print 'Linux'
 
     def getmacinfo(self):
         print 'Mac'
+        
 
     def os_version(self):
         def get(key):
@@ -69,8 +79,6 @@ class GetSysInformation:
         ostype = get("ProductName")
         build = get("CurrentBuildNumber")
         return ostype, build
-
-
 
 
     def getSoftwareList(self):
@@ -138,23 +146,16 @@ class GetSysInformation:
 
 if __name__ == '__main__':
 
-    # Determine OS type...
-
-    GetSysInformation()
     # Instantiate GetSysInformation Object
     SysObj = GetSysInformation()
-    SysObjResult = SysObj.getsysinfo()
-    SysObj.os = SysObjResult[0]
-    SysObj.osbuild = SysObjResult[1]
-    SysObj.serno = SysObjResult[2]
-    SysObj.CompName = SysObjResult[3]
-    SysObj.DomainName = SysObjResult[4]
-    SysObj.UserName = SysObjResult [5]
+    SysObj.getsysinfo()
 
-    print "Operating System: " + SysObj.os
-    print "OS Build: " + SysObj.osbuild
+    print "Operating System: " + SysObj.platform
     print "Serial No. " + str(SysObj.serno)
     print "Computer Name: " + SysObj.CompName
     print "Domain Name: " + SysObj.DomainName
     print "User Name: " + SysObj.UserName
+    print "Logical Drives: " + SysObj.drives
+    print "Processor: " + SysObj.processor
+
     print 'SCRIPT COMPLETE'
