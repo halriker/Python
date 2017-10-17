@@ -5,6 +5,8 @@ from StringIO import StringIO
 import os
 import platform
 import _winreg
+import getpass
+import wmi
 
 
 class GetSysInformation:
@@ -21,7 +23,49 @@ class GetSysInformation:
         self.CONST_OS_SUBKEY = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
         self.CONST_PROC_SUBKEY = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0"
         self.CONST_SW_SUBKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
+
+        # Cross Platform Attributes
         self.mysys = platform.system()
+        self.machname = platform.node()
+        self.processor = platform.processor()
+        self.osbuild = platform.platform()
+        self.drives = None
+
+        # Windows Attributes
+        self.dellservtag = None
+        self.dfs = None
+        # Dell Attribs
+        self.sysmanuf = None
+        self.sysfam = None
+        self.sysprod = None
+        self.biosver = None
+        self.biosrel = None
+
+        # Mac Specific Attributes
+        self.macplatform = None
+
+    @staticmethod
+    def check_creds():
+        logged_in_user = getpass.getuser()
+        if 'admin' in logged_in_user:
+            print 'Welcome', logged_in_user, '\n'
+        else:
+            print 'Sorry, you must run this application from an admin account.'
+
+    @staticmethod
+    def get_service_tag():
+        computer = wmi.WMI()
+        bios_info = computer.Win32_SystemEnclosure()
+        for info in bios_info:
+            print 'The servie tag is', info.SerialNumber
+            return info.SerialNumber
+
+    @staticmethod
+    def get_free_disk_space():
+        c = wmi.WMI()
+        for disk in c.Win32_LogicalDisk(DriveType=3):
+            dfs = disk.Caption, "%0.2f%% free" % (100.0 * long(disk.FreeSpace) / long(disk.Size))
+            return dfs
 
     @staticmethod
     def get_registry_value(key, subkey, value):
@@ -30,6 +74,14 @@ class GetSysInformation:
         handle = _winreg.OpenKey(key, subkey)
         (value, type) = _winreg.QueryValueEx(handle, value)
         return value
+
+        # r = wmi.WMI(namespace="DEFAULT").StdRegProv
+        # result, names = r.EnumKey(
+        #     hDefKey=_winreg
+        #     sSubKeyName=subkey
+        # )
+        # for key in names:
+        #     print key
 
     def getsysinfo(self):
 
@@ -44,22 +96,16 @@ class GetSysInformation:
 
     def getwininfo(self):
         import uuid
-        import platform
-        # from subprocess import Popen, PIPE, STDOUT
-        # p = Popen(['C:\\Windows\\system32\\manage-bde.exe', '-status'], stdout=PIPE, stderr=STDOUT, shell=True)
-        # lines = p.stdout.readlines()
-        # for line in lines:
-        #     print line
         self.serno = uuid.UUID(int=uuid.getnode())
-        self.CompName = win32api.GetComputerName()
         self.DomainName = win32api.GetDomainName()
         self.UserName = win32api.GetUserName()
         self.drives = win32api.GetLogicalDriveStrings()
-        # mon = win32api.GetMonitorInfo()
+        self.dellservtag = self.get_service_tag()
+        self.dfs = self.get_free_disk_space()
+        self.get_bios()
+        # lf.win32api.GetMonitorInfo()
         # sinfo =  win32api.GetSystemInfo()
         # regq = win32api.RegQueryInfoKey()
-        self.processor = platform.processor()
-        self.platform = platform.platform()
         # return os, osbuild, serno, CompName, DomainName, UserName, drives, processor, platform
 
     def getlinuxinfo(self):
@@ -67,18 +113,33 @@ class GetSysInformation:
 
     def getmacinfo(self):
         print 'Mac'
-        
+        self.macplatform = platform.mac_ver()
 
-    def os_version(self):
+    def get_bios(self):
         def get(key):
             return self.get_registry_value(
                 "HKEY_LOCAL_MACHINE",
-                "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
+                "HARDWARE\\DESCRIPTION\\System\\BIOS",
                 key)
 
-        ostype = get("ProductName")
-        build = get("CurrentBuildNumber")
-        return ostype, build
+        self.sysmanuf = get("SystemManufacturer")
+        self.sysfam = get("SystemFamily")
+        self.sysprod = get("SystemProductName")
+        self.biosver = get("BIOSVersion")
+        self.biosrel = get("BIOSReleaseDate")
+        print "Dell Info Gathered"
+        # return sysmanuf, sysfam, sysprod, biosver, biosrel
+
+    # def os_version(self):
+    #     def get(key):
+    #         return self.get_registry_value(
+    #             "HKEY_LOCAL_MACHINE",
+    #             "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
+    #             key)
+    #
+    #     ostype = get("ProductName")
+    #     build = get("CurrentBuildNumber")
+    #     return ostype, build
 
 
     def getSoftwareList(self):
@@ -149,10 +210,13 @@ if __name__ == '__main__':
     # Instantiate GetSysInformation Object
     SysObj = GetSysInformation()
     SysObj.getsysinfo()
+    print SysObj.check_creds()
+    print SysObj.get_service_tag()
+    print SysObj.get_free_disk_space()
 
-    print "Operating System: " + SysObj.platform
+    print "Operating System: " + SysObj.osbuild
     print "Serial No. " + str(SysObj.serno)
-    print "Computer Name: " + SysObj.CompName
+    print "Computer Name: " + SysObj.machname
     print "Domain Name: " + SysObj.DomainName
     print "User Name: " + SysObj.UserName
     print "Logical Drives: " + SysObj.drives
