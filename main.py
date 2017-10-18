@@ -7,6 +7,11 @@ import platform
 import _winreg
 import getpass
 import wmi
+import ioreg
+if os.name == 'posix' and sys.version_info[0] < 3:
+    import subprocess32 as subprocess
+else:
+    import subprocess
 
 
 class GetSysInformation:
@@ -114,6 +119,20 @@ class GetSysInformation:
     def getmacinfo(self):
         print 'Mac'
         self.macplatform = platform.mac_ver()
+        # # !/bin/bash
+        # SERIAL = ` / bin / grep
+        # Serial / proc / cpuinfo | / usr / bin / awk
+        # '{print $3}'
+        # `
+        # MAC = ` / bin / ip
+        # link
+        # show
+        # eth0 | / usr / bin / awk
+        # '/ether/ {print $2}'
+        # `
+        print 'break'
+        subprocess.call(['ioreg', '-l', '|', 'grep', 'IOPlatformSerialNumber'])
+        print 'subprocess'
 
     def get_bios(self):
         def get(key):
