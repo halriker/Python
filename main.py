@@ -1,13 +1,15 @@
 import win32api
 import win32con
-import win32file
-from StringIO import StringIO
 import os
+import sys
 import platform
 import _winreg
 import getpass
 import wmi
-import ioreg
+import logging
+import logging.config
+import yaml
+
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
 else:
@@ -19,15 +21,15 @@ class GetSysInformation:
     def __init__(self):
         # variable to write a flat file
         self.pwd = os.getcwd()
-        self.fileHandle = None
-        self.HKEY_CLASSES_ROOT = win32con.HKEY_CLASSES_ROOT
-        self.HKEY_CURRENT_USER = win32con.HKEY_CURRENT_USER
-        self.HKEY_LOCAL_MACHINE = win32con.HKEY_LOCAL_MACHINE
-        self.HKEY_USERS = win32con.HKEY_USERS
-        self.FILE_PATH = self.pwd + 'osinfo.txt'
-        self.CONST_OS_SUBKEY = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
-        self.CONST_PROC_SUBKEY = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0"
-        self.CONST_SW_SUBKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
+        # self.fileHandle = None
+        # self.HKEY_CLASSES_ROOT = win32con.HKEY_CLASSES_ROOT
+        # self.HKEY_CURRENT_USER = win32con.HKEY_CURRENT_USER
+        # self.HKEY_LOCAL_MACHINE = win32con.HKEY_LOCAL_MACHINE
+        # self.HKEY_USERS = win32con.HKEY_USERS
+        # self.FILE_PATH = self.pwd + 'osinfo.txt'
+        # self.CONST_OS_SUBKEY = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
+        # self.CONST_PROC_SUBKEY = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0"
+        # self.CONST_SW_SUBKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
 
         # Cross Platform Attributes
         self.mysys = platform.system()
@@ -48,6 +50,23 @@ class GetSysInformation:
 
         # Mac Specific Attributes
         self.macplatform = None
+
+    @staticmethod
+    def setup_logging():
+        default_path = 'logging.yaml'
+        default_level = logging.INFO
+        env_key = LOG_CFG
+        """Setup logging configuration"""
+        path = default_path
+        value = os.getenv(env_key, None)
+        if value:
+            path = value
+        if os.path.exists(path):
+            with open(path, 'rt') as f:
+                config = yaml.safe_load(f.read())
+            logging.config.dictConfig(config)
+        else:
+            logging.basicConfig(level=default_level)
 
     @staticmethod
     def check_creds():
@@ -226,9 +245,13 @@ class GetSysInformation:
 
 if __name__ == '__main__':
 
+    LOG_CFG = 'C:/Users/hal.riker.SEMA4GENOMICS/PycharmProjects/SysInfo/logging.yaml'
     # Instantiate GetSysInformation Object
     SysObj = GetSysInformation()
     SysObj.getsysinfo()
+    SysObj.setup_logging()
+    logger = logging.getLogger(__name__)
+    logger.info('test')
     print SysObj.check_creds()
     print SysObj.get_service_tag()
     print SysObj.get_free_disk_space()
