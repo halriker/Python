@@ -44,6 +44,7 @@ class GetSysInformation:
         self.DomainName = None
         self.UserName = None
         self.ramtot = None
+        self.bitlocker = None
         # Dell Attribs from Registry
         self.sysmanuf = None
         self.sysfam = None
@@ -71,13 +72,14 @@ class GetSysInformation:
         else:
             logging.basicConfig(level=default_level)
 
-    @staticmethod
-    def check_creds():
+    def check_creds(self):
         logged_in_user = getpass.getuser()
         if 'admin' in logged_in_user:
             logger.info('You are logged in as: ' + logged_in_user)
+            return True
         else:
             logger.error('You must run this application from an admin account to get Bitlocker information.')
+            return False
 
     @staticmethod
     def get_service_tag():
@@ -116,7 +118,6 @@ class GetSysInformation:
             logger.error('Operating System Not Supported!!!')
 
     def getwininfo(self):
-        import uuid
         self.DomainName = win32api.GetDomainName()
         self.UserName = win32api.GetUserName()
         self.drives = win32api.GetLogicalDriveStrings()
@@ -124,6 +125,7 @@ class GetSysInformation:
         self.dfs = self.get_free_disk_space()
         self.get_bios()
         self.get_ram()
+        self.get_bitlocker()
 
     def getlinuxinfo(self):
         print 'Linux'
@@ -166,6 +168,13 @@ class GetSysInformation:
             ramtotbytes = int(i.TotalPhysicalMemory)
         conv = ramtotbytes/1000000000
         self.ramtot = str(conv)
+
+    def get_bitlocker(self):
+        admin = self.check_creds()
+        if admin:
+            self.bitlocker = subprocess.call(['manage-bde', '-status'])
+        else:
+            self.bitlocker = False
 
     def getSoftwareList(self):
         try:
