@@ -41,7 +41,10 @@ class GetSysInformation:
         # Windows Attributes
         self.dellservtag = None
         self.dfs = None
-        # Dell Attribs
+        self.DomainName = None
+        self.UserName = None
+        self.ramtot = None
+        # Dell Attribs from Registry
         self.sysmanuf = None
         self.sysfam = None
         self.sysprod = None
@@ -72,16 +75,15 @@ class GetSysInformation:
     def check_creds():
         logged_in_user = getpass.getuser()
         if 'admin' in logged_in_user:
-            print 'Welcome', logged_in_user, '\n'
+            logger.info('You are logged in as: ' + logged_in_user)
         else:
-            print 'Sorry, you must run this application from an admin account.'
+            logger.error('You must run this application from an admin account to get Bitlocker information.')
 
     @staticmethod
     def get_service_tag():
         computer = wmi.WMI()
         bios_info = computer.Win32_SystemEnclosure()
         for info in bios_info:
-            print 'The servie tag is', info.SerialNumber
             return info.SerialNumber
 
     @staticmethod
@@ -99,38 +101,29 @@ class GetSysInformation:
         (value, type) = _winreg.QueryValueEx(handle, value)
         return value
 
-        # r = wmi.WMI(namespace="DEFAULT").StdRegProv
-        # result, names = r.EnumKey(
-        #     hDefKey=_winreg
-        #     sSubKeyName=subkey
-        # )
-        # for key in names:
-        #     print key
-
     def getsysinfo(self):
 
         if self.mysys == 'Windows':
+            logger.info('Windows Operating System Detected')
             self.getwininfo()
         elif self.mysys == 'Linux':
+            logger.info('Linux Operating System Detected')
             self.getlinuxinfo()
         elif self.mysys == 'Darwin':
+            logger.info('MAC OSX Operating System Detected')
             self.getmacinfo()
         else:
-            print "OS Not Supported"
+            logger.error('Operating System Not Supported!!!')
 
     def getwininfo(self):
         import uuid
-        self.serno = uuid.UUID(int=uuid.getnode())
         self.DomainName = win32api.GetDomainName()
         self.UserName = win32api.GetUserName()
         self.drives = win32api.GetLogicalDriveStrings()
         self.dellservtag = self.get_service_tag()
         self.dfs = self.get_free_disk_space()
         self.get_bios()
-        # lf.win32api.GetMonitorInfo()
-        # sinfo =  win32api.GetSystemInfo()
-        # regq = win32api.RegQueryInfoKey()
-        # return os, osbuild, serno, CompName, DomainName, UserName, drives, processor, platform
+        self.get_ram()
 
     def getlinuxinfo(self):
         print 'Linux'
@@ -160,25 +153,19 @@ class GetSysInformation:
                 "HARDWARE\\DESCRIPTION\\System\\BIOS",
                 key)
 
+        logger.info('*** Gathering System BIOS Information From HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\BIOS ***')
         self.sysmanuf = get("SystemManufacturer")
         self.sysfam = get("SystemFamily")
         self.sysprod = get("SystemProductName")
         self.biosver = get("BIOSVersion")
         self.biosrel = get("BIOSReleaseDate")
-        print "Dell Info Gathered"
-        # return sysmanuf, sysfam, sysprod, biosver, biosrel
 
-    # def os_version(self):
-    #     def get(key):
-    #         return self.get_registry_value(
-    #             "HKEY_LOCAL_MACHINE",
-    #             "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
-    #             key)
-    #
-    #     ostype = get("ProductName")
-    #     build = get("CurrentBuildNumber")
-    #     return ostype, build
-
+    def get_ram(self):
+        computer = wmi.WMI()
+        for i in computer.Win32_ComputerSystem():
+            ramtotbytes = int(i.TotalPhysicalMemory)
+        conv = ramtotbytes/1000000000
+        self.ramtot = str(conv)
 
     def getSoftwareList(self):
         try:
@@ -248,20 +235,29 @@ if __name__ == '__main__':
     LOG_CFG = 'C:/Users/hal.riker.SEMA4GENOMICS/PycharmProjects/SysInfo/logging.yaml'
     # Instantiate GetSysInformation Object
     SysObj = GetSysInformation()
-    SysObj.getsysinfo()
     SysObj.setup_logging()
     logger = logging.getLogger(__name__)
-    logger.info('test')
-    print SysObj.check_creds()
-    print SysObj.get_service_tag()
-    print SysObj.get_free_disk_space()
-
-    print "Operating System: " + SysObj.osbuild
-    print "Serial No. " + str(SysObj.serno)
-    print "Computer Name: " + SysObj.machname
-    print "Domain Name: " + SysObj.DomainName
-    print "User Name: " + SysObj.UserName
-    print "Logical Drives: " + SysObj.drives
-    print "Processor: " + SysObj.processor
-
-    print 'SCRIPT COMPLETE'
+    logger.info('Logging Configuration File Path: ' + LOG_CFG)
+    logger.info('Logging Setup Complete')
+    SysObj.getsysinfo()
+    logger.info('System Manufacteur: ' + SysObj.sysmanuf)
+    logger.info('System Family: ' + SysObj.sysfam)
+    logger.info('System Model: ' + SysObj.sysprod)
+    logger.info('BIOS Version: ' + SysObj.biosver)
+    logger.info('BIOS Release Date: ' + SysObj.biosrel)
+    logger.info('The servie tag is ' + SysObj.get_service_tag())
+    # Parse dfs to just percent as string
+    logger.info(SysObj.get_free_disk_space())
+    logger.info('Operating System: ' + SysObj.osbuild)
+    logger.info('Computer Name: ' + SysObj.machname)
+    logger.info('Domain Name: ' + SysObj.DomainName)
+    logger.info('User Name: ' + SysObj.UserName)
+    logger.info('Logical Drives: ' + SysObj.drives)
+    logger.info('Processor: ' + SysObj.processor)
+    logger.info('Total RAM: ' + SysObj.ramtot)
+    # Ethernet NIC
+    # Wireless NIC
+    # IP Address
+    # BIT LOCKER INFO
+    # System Processes/Software
+    logger.info('*** PROCESSING COMPLETE ***')
