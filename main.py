@@ -172,9 +172,15 @@ class GetSysInformation:
     def get_bitlocker(self):
         admin = self.check_creds()
         if admin:
-            self.bitlocker = subprocess.call(['manage-bde', '-status'])
+            # self.bitlocker = subprocess.call(['manage-bde', '-status'])
+            logger.info('admin')
         else:
-            self.bitlocker = False
+            x = subprocess.Popen(['nircmdc', 'elevate', 'cmd'], stdout=subprocess.PIPE)
+            cmdpid = x.pid
+            logger.log('The console PID: ' + cmdpid)
+            x.communicate(['cmd.exe', '/C', 'manage-bde', '-status'])
+            logger.log('f')
+            self.bitlocker = ""
 
     def getSoftwareList(self):
         try:
