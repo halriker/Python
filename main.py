@@ -20,7 +20,48 @@ if os.name == 'posix' and sys.version_info[0] < 3:
 else:
     import subprocess
 
+sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
+    									id integer PRIMARY KEY,
+    									machine_name text NOT NULL UNIQUE,
+    									operating_system text NOT NULL,	
+    									domain_name text,
+    									user_name text,
+    									manufacteur text,
+    									family text,
+    									model text,
+    									bios_ver text,
+    									bios_rel_date text,
+    									serial_no text,
+    									created_date text NOT NULL,
+    									updated_date text NOT NULL
+    								); """
+
+sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
+                            id integer PRIMARY KEY,
+                            software_name text NOT NULL,
+                            version text,
+                            install_date text,
+                            created_date text NOT NULL,
+                            updated_date text NOT NULL,
+                            machine_id integer NOT NULL,
+                            FOREIGN KEY (machine_id) REFERENCES machine (id)
+                        ); """
+
+sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
+                                    id integer PRIMARY KEY,						
+                                    logical_drives text,
+                                    logical_drives_free_space text,
+                                    processor text,
+                                    physical_mem text,
+                                    machine_id integer NOT NULL,
+                                    created_date text NOT NULL,
+                                    updated_date text NOT NULL,
+                                    FOREIGN KEY (machine_id) REFERENCES machine (id)
+                                );"""
+
+
 class GetSysInformation:
+
     def __init__(self):
         # variables to write to SQLite
         self.pwd = os.getcwd()
@@ -63,6 +104,8 @@ class GetSysInformation:
         # Mac Specific Attributes
         self.macplatform = None
 
+    # Database Methods
+
     def create_connection(self, db_file):
         """ create a database connection to a SQLite database """
         try:
@@ -86,6 +129,57 @@ class GetSysInformation:
             c.execute(create_table_sql)
         except Error as e:
             print(e)
+
+    def add_machine(self, conn, machine):
+        """
+        Add new machine into the machine table
+        :param conn:
+        :param machine:
+        :return: machine id
+        """
+        sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,manufacteur,family,model,bios_ver,bios_rel_date,serial_no,created_date,updated_date)
+                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?) '''
+        cur = conn.cursor()
+        cur.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machine[0],))
+        data = cur.fetchall()
+        if len(data) == 0:
+            logger.info('*** Adding machine named %s to the database ***' % machine[0])
+            cur.execute(sql, machine)
+            return cur.lastrowid
+        else:
+            logger.warn('Machine found with name %s already exits in the database' % (machine[0]))
+            logger.warn('*** EXITING THE SCRIPT ***')
+            sys.exit()
+
+    def add_software(self, conn, sw):
+        """
+        Add Software for machine
+        :param conn:
+        :param sw:
+        :return:
+        """
+
+        sql = ''' INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id)
+            VALUES(?,?,?,?,?,?) '''
+        cur = conn.cursor()
+        cur.execute(sql, software)
+        return cur.lastrowid
+
+    def add_hardware(self, conn, hw):
+        """
+        Add Hardware for machine
+        :param conn:
+        :param hw:
+        :return:
+        """
+
+        sql = ''' INSERT INTO hardware(logical_drives,logical_drives_free_space,processor,physical_mem,machine_id,created_date,updated_date)
+            VALUES(?,?,?,?,?,?,?) '''
+        cur = conn.cursor()
+        cur.execute(sql, hardware)
+        return cur.lastrowid
+
+    # Utility Methods
 
     def parse_key(self, key):
         key = key.upper()
@@ -315,56 +409,62 @@ if __name__ == '__main__':
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
     SysObj.getsysinfo()
-    SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
-    sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
-    									id integer PRIMARY KEY,
-    									machine_name text NOT NULL,
-    									operating_system text NOT NULL,	
-    									domain_name text,
-    									user_name text,
-    									manufacteur text,
-    									family text,
-    									model text,
-    									bios_ver text,
-    									bios_rel_date text,
-    									serial_no text,
-    									created_date text NOT NULL,
-    									updated_date text NOT NULL
-    								); """
 
-    sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
-    							id integer PRIMARY KEY,
-    							software_name text NOT NULL,
-    							version text,
-    							install_date text,
-    							user_name text,
-    							created_date text NOT NULL,
-    							updated_date text NOT NULL,
-    							machine_id integer NOT NULL,
-    							FOREIGN KEY (machine_id) REFERENCES machine (id)
-    						); """
-
-    sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
-    									id integer PRIMARY KEY,						
-    									logical_drives text,
-    									logical_drives_free_space text,
-    									processor text,
-    									physical_mem text,
-    									machine_id integer NOT NULL,
-    									created_date text NOT NULL,
-    									updated_date text NOT NULL,
-    									FOREIGN KEY (machine_id) REFERENCES machine (id)
-    								);"""
-
-    if SysObj.conn is not None:
+    try:
+        SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
+    except Exception, e:
+        print 'error' + e
+    finally:
         # create machine table
         SysObj.create_table(SysObj.conn, sql_create_machine_table)
         # create hardware table
         SysObj.create_table(SysObj.conn, sql_create_hardware_table)
         # create software table
         SysObj.create_table(SysObj.conn, sql_create_software_table)
-    else:
-        print("Error! cannot create the database connection.")
+
+    with SysObj.conn:
+
+        machine = (
+            'DESKTOP-0104G2N',
+            'Windows-10-10.0.15063',
+            'SEMA4GENOMICS',
+            'hal.riker',
+            'Dell',
+            'XPS',
+            'XPS 15 9560',
+            '1.5.0',
+            '08/30/2017',
+            'JGC7GH2',
+            '10/26/2017',
+            '10/26/2017'
+        )
+
+        machine_id = SysObj.add_machine(SysObj.conn, machine)
+
+        # INSERT SOFTWARE
+        software = (
+            'Microsoft Azure Compute Emulator - v2.9.5.3',
+            '2.9.8699.20',
+            '10/20/2017',
+            '10/26/2017',
+            '10/26/2017',
+            machine_id
+        )
+
+        SysObj.add_software(SysObj.conn, software)
+
+        # INSERT HARDWARE
+        hardware = (
+            'C:',
+            '76%',
+            'Intel64 Family 6 Model 158 Stepping 9, GenuineIntel',
+            '17GB',
+            machine_id,
+            '10/26/2017',
+            '10/26/2017'
+        )
+
+        SysObj.add_hardware(SysObj.conn, hardware)
 
     logger.info('System Manufacteur: ' + SysObj.sysmanuf)
     logger.info('System Family: ' + SysObj.sysfam)
