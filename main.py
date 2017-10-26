@@ -11,17 +11,21 @@ import yaml
 from _winreg import *
 import _winreg
 import errno
+import sqlite3
+from sqlite3 import Error
+
 
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
 else:
     import subprocess
 
-
 class GetSysInformation:
     def __init__(self):
-        # variable to write a flat file
+        # variables to write to SQLite
         self.pwd = os.getcwd()
+        self.conn = None
+        self.sqlitever = None
 
         # Cross Platform Attributes
         self.mysys = platform.system()
@@ -48,6 +52,7 @@ class GetSysInformation:
             "HKEY_CURRENT_CONFIG": HKEY_CURRENT_CONFIG,
             "HKEY_DYN_DATA": HKEY_DYN_DATA
         }
+        self.instsoft = []
         # Dell Attribs from Registry
         self.sysmanuf = None
         self.sysfam = None
@@ -57,6 +62,30 @@ class GetSysInformation:
 
         # Mac Specific Attributes
         self.macplatform = None
+
+    def create_connection(self, db_file):
+        """ create a database connection to a SQLite database """
+        try:
+            self.conn = sqlite3.connect(db_file)
+            self.sqlitever = sqlite3.version
+            logger.info('SQLite Version: ' + self.sqlitever)
+        except Error as e:
+            logger.info(e)
+        # finally:
+        #     self.conn.close()
+        #     logger.info('SQLite DB Connection Closed')
+
+    def create_table(self, conn, create_table_sql):
+        """ create a table from the create_table_sql statement
+        :param conn: Connection object
+        :param create_table_sql: a CREATE TABLE statement
+        :return:
+        """
+        try:
+            c = conn.cursor()
+            c.execute(create_table_sql)
+        except Error as e:
+            print(e)
 
     def parse_key(self, key):
         key = key.upper()
@@ -248,6 +277,11 @@ class GetSysInformation:
 
             if value:
                 logger.info(value)
+                # for k, v in value.iteritems():
+                #     print k
+                #     print v
+                self.instsoft.append(value)
+
 
     def openFile(self):
         try:
@@ -281,6 +315,57 @@ if __name__ == '__main__':
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
     SysObj.getsysinfo()
+    SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
+    sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
+    									id integer PRIMARY KEY,
+    									machine_name text NOT NULL,
+    									operating_system text NOT NULL,	
+    									domain_name text,
+    									user_name text,
+    									manufacteur text,
+    									family text,
+    									model text,
+    									bios_ver text,
+    									bios_rel_date text,
+    									serial_no text,
+    									created_date text NOT NULL,
+    									updated_date text NOT NULL
+    								); """
+
+    sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
+    							id integer PRIMARY KEY,
+    							software_name text NOT NULL,
+    							version text,
+    							install_date text,
+    							user_name text,
+    							created_date text NOT NULL,
+    							updated_date text NOT NULL,
+    							machine_id integer NOT NULL,
+    							FOREIGN KEY (machine_id) REFERENCES machine (id)
+    						); """
+
+    sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
+    									id integer PRIMARY KEY,						
+    									logical_drives text,
+    									logical_drives_free_space text,
+    									processor text,
+    									physical_mem text,
+    									machine_id integer NOT NULL,
+    									created_date text NOT NULL,
+    									updated_date text NOT NULL,
+    									FOREIGN KEY (machine_id) REFERENCES machine (id)
+    								);"""
+
+    if SysObj.conn is not None:
+        # create machine table
+        SysObj.create_table(SysObj.conn, sql_create_machine_table)
+        # create hardware table
+        SysObj.create_table(SysObj.conn, sql_create_hardware_table)
+        # create software table
+        SysObj.create_table(SysObj.conn, sql_create_software_table)
+    else:
+        print("Error! cannot create the database connection.")
+
     logger.info('System Manufacteur: ' + SysObj.sysmanuf)
     logger.info('System Family: ' + SysObj.sysfam)
     logger.info('System Model: ' + SysObj.sysprod)
@@ -298,6 +383,8 @@ if __name__ == '__main__':
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
     # Get Installed Software from the Windows Registry
     SysObj.getSoftwareList()
+
+    # Future write instsoft to database
 
     # Ethernet NIC
     # Wireless NIC
