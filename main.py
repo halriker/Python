@@ -3,12 +3,14 @@ import win32con
 import os
 import sys
 import platform
-import _winreg
 import getpass
 import wmi
 import logging
 import logging.config
 import yaml
+from _winreg import *
+import _winreg
+import errno
 
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
@@ -17,19 +19,9 @@ else:
 
 
 class GetSysInformation:
-
     def __init__(self):
         # variable to write a flat file
         self.pwd = os.getcwd()
-        # self.fileHandle = None
-        # self.HKEY_CLASSES_ROOT = win32con.HKEY_CLASSES_ROOT
-        # self.HKEY_CURRENT_USER = win32con.HKEY_CURRENT_USER
-        # self.HKEY_LOCAL_MACHINE = win32con.HKEY_LOCAL_MACHINE
-        # self.HKEY_USERS = win32con.HKEY_USERS
-        # self.FILE_PATH = self.pwd + 'osinfo.txt'
-        # self.CONST_OS_SUBKEY = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
-        # self.CONST_PROC_SUBKEY = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0"
-        # self.CONST_SW_SUBKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
 
         # Cross Platform Attributes
         self.mysys = platform.system()
@@ -39,12 +31,23 @@ class GetSysInformation:
         self.drives = None
 
         # Windows Attributes
+        self.HKEY_LOCAL_MACHINE = 'HKEY_LOCAL_MACHINE'
+        self.CONST_SW_SUBKEY = 'SOFTWARE'
         self.dellservtag = None
         self.dfs = None
         self.DomainName = None
         self.UserName = None
         self.ramtot = None
         self.bitlocker = None
+        self.roots_hives = {
+            "HKEY_CLASSES_ROOT": HKEY_CLASSES_ROOT,
+            "HKEY_CURRENT_USER": HKEY_CURRENT_USER,
+            "HKEY_LOCAL_MACHINE": HKEY_LOCAL_MACHINE,
+            "HKEY_USERS": HKEY_USERS,
+            "HKEY_PERFORMANCE_DATA": HKEY_PERFORMANCE_DATA,
+            "HKEY_CURRENT_CONFIG": HKEY_CURRENT_CONFIG,
+            "HKEY_DYN_DATA": HKEY_DYN_DATA
+        }
         # Dell Attribs from Registry
         self.sysmanuf = None
         self.sysfam = None
@@ -54,6 +57,58 @@ class GetSysInformation:
 
         # Mac Specific Attributes
         self.macplatform = None
+
+    def parse_key(self, key):
+        key = key.upper()
+        parts = key.split('\\')
+        root_hive_name = parts[0]
+        root_hive = self.roots_hives.get(root_hive_name)
+        partial_key = '\\'.join(parts[1:])
+
+        if not root_hive:
+            raise Exception('root hive "{}" was not found'.format(root_hive_name))
+
+        return partial_key, root_hive
+
+    def get_sub_keys(self, key):
+        partial_key, root_hive = self.parse_key(key)
+
+        with ConnectRegistry(None, root_hive) as reg:
+            with OpenKey(reg, partial_key) as key_object:
+                sub_keys_count, values_count, last_modified = QueryInfoKey(key_object)
+                try:
+                    for i in range(sub_keys_count):
+                        sub_key_name = EnumKey(key_object, i)
+                        yield sub_key_name
+                except WindowsError:
+                    pass
+
+    def get_values(self, key, fields):
+        partial_key, root_hive = self.parse_key(key)
+
+        with ConnectRegistry(None, root_hive) as reg:
+            with OpenKey(reg, partial_key) as key_object:
+                data = {}
+                for field in fields:
+                    try:
+                        value, type = QueryValueEx(key_object, field)
+                        data[field] = value
+                    except WindowsError:
+                        pass
+
+                return data
+
+    def get_value(self, key, field):
+        values = self.get_values(key, [field])
+        return values.get(field)
+
+    def join(self, path, *paths):
+        path = path.strip('/\\')
+        paths = map(lambda x: x.strip('/\\'), paths)
+        paths = list(paths)
+        result = os.path.join(path, *paths)
+        result = result.replace('/', '\\')
+        return result
 
     @staticmethod
     def setup_logging():
@@ -87,6 +142,7 @@ class GetSysInformation:
         bios_info = computer.Win32_SystemEnclosure()
         for info in bios_info:
             return info.SerialNumber
+
 
     @staticmethod
     def get_free_disk_space():
@@ -125,7 +181,7 @@ class GetSysInformation:
         self.dfs = self.get_free_disk_space()
         self.get_bios()
         self.get_ram()
-        self.get_bitlocker()
+        # self.get_bitlocker()
 
     def getlinuxinfo(self):
         print 'Linux'
@@ -177,52 +233,21 @@ class GetSysInformation:
         else:
             x = subprocess.Popen(['nircmdc', 'elevate', 'cmd'], stdout=subprocess.PIPE)
             cmdpid = x.pid
-            logger.log('The console PID: ' + cmdpid)
+            logger.log('The console PID: ' + str(cmdpid))
             x.communicate(['cmd.exe', '/C', 'manage-bde', '-status'])
             logger.log('f')
             self.bitlocker = ""
 
     def getSoftwareList(self):
-        try:
-            hCounter=0
-            hAttCounter=0
-            # connecting to the base
-            hHandle = win32api.RegConnectRegistry(None,win32con.HKEY_LOCAL_MACHINE)
-            # getting the machine name and domain name
-            hCompName = win32api.GetComputerName()
-            hDomainName = win32api.GetDomainName()
-            # opening the sub key to get the list of Softwares installed
-            hHandle = win32api.RegOpenKeyEx(self.HKEY_LOCAL_MACHINE,self.CONST_SW_SUBKEY,0,win32con.KEY_ALL_ACCESS)
-            # get the total no. of sub keys
-            hNoOfSubNodes = win32api.RegQueryInfoKey(hHandle)
-            # delete the entire data and insert it again
-            #deleteMachineSW(hCompName,hDomainName)
-            # browsing each sub Key which can be Applications installed
-            while hCounter < hNoOfSubNodes[0]:
-                hAppName = win32api.RegEnumKey(hHandle,hCounter)
-                hPath = self.CONST_SW_SUBKEY + "\\" + hAppName
-                # initialising hAttCounter
-                hAttCounter = 0
-                hOpenApp = win32api.RegOpenKeyEx(self.HKEY_LOCAL_MACHINE,hPath,0,win32con.KEY_ALL_ACCESS)
-                # [1] will give the no. of attributes in this sub key
-                hKeyCount = win32api.RegQueryInfoKey(hOpenApp)
-                hMaxKeyCount = hKeyCount[1]
-                hSWName = ""
-                hSWVersion = ""
-                while hAttCounter < hMaxKeyCount:
-                    hData = win32api.RegEnumValue(hOpenApp,hAttCounter)
-                    if hData[0]== "DisplayName":
-                        hSWName = hData[1]
-                        self.preparefile("SW Name",hSWName)
-                    elif hData[0]== "DisplayVersion":
-                        hSWVersion = hData[1]
-                        self.preparefile("SW Version",hSWVersion)
-                    hAttCounter = hAttCounter + 1
-                #if (hSWName !=""):
-                #insertMachineSW(hCompName,hDomainName,hSWName,hSWVersion)
-                hCounter = hCounter + 1
-        except:
-            self.preparefile("Exception","In exception in getSoftwareList")
+
+        key = r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
+
+        for sub_key in self.get_sub_keys(key):
+            path = self.join(key, sub_key)
+            value = self.get_values(path, ['DisplayName', 'DisplayVersion', 'InstallDate'])
+
+            if value:
+                logger.info(value)
 
     def openFile(self):
         try:
@@ -243,6 +268,7 @@ class GetSysInformation:
             self.fileHandle.close()
         except:
             print "Exceptions in closeFile"
+
 
 
 if __name__ == '__main__':
@@ -269,7 +295,10 @@ if __name__ == '__main__':
     logger.info('User Name: ' + SysObj.UserName)
     logger.info('Logical Drives: ' + SysObj.drives)
     logger.info('Processor: ' + SysObj.processor)
-    logger.info('Total RAM: ' + SysObj.ramtot)
+    logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
+    # Get Installed Software from the Windows Registry
+    SysObj.getSoftwareList()
+
     # Ethernet NIC
     # Wireless NIC
     # IP Address
