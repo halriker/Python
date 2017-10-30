@@ -19,8 +19,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="485" column="0" lean-forward="false" selection-start-line="485" selection-start-column="0" selection-end-line="485" selection-end-column="0" />
+            <state relative-caret-position="20320">
+              <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -31,7 +31,7 @@
       <file leaf-file-name="ntpath.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/ntpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1106">
+            <state relative-caret-position="0">
               <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
@@ -41,7 +41,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16324">
+            <state relative-caret-position="0">
               <caret line="1166" column="0" lean-forward="false" selection-start-line="1166" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
               <folding />
             </state>
@@ -51,7 +51,7 @@
       <file leaf-file-name="getpass.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/getpass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2114">
+            <state relative-caret-position="0">
               <caret line="151" column="35" lean-forward="false" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
               <folding />
             </state>
@@ -61,7 +61,7 @@
       <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-7">
               <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
               <folding />
             </state>
@@ -71,7 +71,7 @@
       <file leaf-file-name="subprocess.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/subprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10206">
+            <state relative-caret-position="0">
               <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
               <folding />
             </state>
@@ -81,8 +81,8 @@
       <file leaf-file-name="info.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/info.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6188">
-              <caret line="442" column="106" lean-forward="false" selection-start-line="442" selection-start-column="55" selection-end-line="442" selection-end-column="106" />
+            <state relative-caret-position="-464879">
+              <caret line="7352" column="0" lean-forward="false" selection-start-line="7352" selection-start-column="0" selection-end-line="7352" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
       <file leaf-file-name="logging.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logging.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
+            <state relative-caret-position="0">
               <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
               <folding />
             </state>
@@ -138,10 +138,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="-15" />
-    <option name="width" value="5808" />
-    <option name="height" value="3168" />
+    <option name="x" value="1835" />
+    <option name="y" value="-1552" />
+    <option name="width" value="459" />
+    <option name="height" value="384" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -185,11 +185,6 @@
               <item name="SysInfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="SysInfo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SysInfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlite" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -199,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="settings.editor.splitter.proportion" value="0.23698041" />
   </component>
   <component name="RecentsManager">
@@ -258,10 +253,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="-5" width="1291" height="691" extended-state="6" />
+    <frame x="-16" y="-2176" width="3872" height="2132" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1708502" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.055584826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32384142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -269,7 +264,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4397163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34566" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -306,29 +301,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>162</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>161</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>459</line>
-          <option name="timeStamp" value="185" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>485</line>
-          <option name="timeStamp" value="186" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="197" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -649,7 +622,7 @@
     </entry>
     <entry file="file://C:/Python27/Lib/getpass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2114">
+        <state relative-caret-position="0">
           <caret line="151" column="35" lean-forward="false" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
           <folding />
         </state>
@@ -657,7 +630,7 @@
     </entry>
     <entry file="file://C:/Python27/Lib/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10206">
+        <state relative-caret-position="0">
           <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
           <folding />
         </state>
@@ -665,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logging.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
+        <state relative-caret-position="0">
           <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
           <folding />
         </state>
@@ -681,16 +654,8 @@
     </entry>
     <entry file="file://C:/Python27/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
+        <state relative-caret-position="0">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6188">
-          <caret line="442" column="106" lean-forward="false" selection-start-line="442" selection-start-column="55" selection-end-line="442" selection-end-column="106" />
           <folding />
         </state>
       </provider>
@@ -712,7 +677,7 @@
     </entry>
     <entry file="file://C:/Python27/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16324">
+        <state relative-caret-position="0">
           <caret line="1166" column="0" lean-forward="false" selection-start-line="1166" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
           <folding />
         </state>
@@ -720,16 +685,24 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-7">
           <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464879">
+          <caret line="7352" column="0" lean-forward="false" selection-start-line="7352" selection-start-column="0" selection-end-line="7352" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="485" column="0" lean-forward="false" selection-start-line="485" selection-start-column="0" selection-end-line="485" selection-end-column="0" />
+        <state relative-caret-position="20320">
+          <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

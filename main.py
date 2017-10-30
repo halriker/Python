@@ -40,7 +40,7 @@ sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
     								); """
 
 sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
-                            id integer auto_increment PRIMARY KEY,
+                            id integer PRIMARY KEY,
                             software_name text NOT NULL,
                             version text,
                             install_date text,
@@ -51,7 +51,7 @@ sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
                         ); """
 
 sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
-                                    id integer auto_increment PRIMARY KEY,						
+                                    id integer PRIMARY KEY,						
                                     logical_drives text,
                                     logical_drives_free_space text,
                                     processor text,
@@ -123,7 +123,6 @@ class GetSysInformation:
 
     def create_table(self, create_table_sql):
         """ create a table from the create_table_sql statement
-        :param conn: Connection object
         :param create_table_sql: a CREATE TABLE statement
         :return:
         """
@@ -131,12 +130,12 @@ class GetSysInformation:
         conn, cursor = self.get_connection()
         if conn is None:
             logger.info("Could not get connection")
+        else:
             cursor.execute(create_table_sql)
 
     def add_machine(self, machine):
         """
         Add new machine into the machine table
-        :param conn:
         :param machine:
         :return: machine id
         """
@@ -144,40 +143,45 @@ class GetSysInformation:
         conn, cursor = self.get_connection()
         if conn is None:
             logger.info("Could not get connection")
-        # createddate = datetime.date.today()
-        # updateddate = datetime.date.today()
-        # self.machine.extend([str(createddate), str(updateddate)])
+            sys.exit()
+        createddate = datetime.date.today()
+        updateddate = datetime.date.today()
+        self.machine.extend([str(createddate), str(updateddate)])
 
         sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,serial_no,manufacteur,family,model,bios_ver,bios_rel_date,created_date,updated_date) 
                   VALUES(?,?,?,?,?,?,?,?,?,?,?,?) '''
 
-        cursor.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machinex[0],))
-        logger.info(machinex[0])
+        cursor.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machine[0],))
+        logger.info(machine[0])
         data = cursor.fetchall()
         if len(data) == 0:
-            logger.info('*** Adding machine named %s to the database ***' % machinex[0])
+            logger.info('*** Adding machine named %s to the database ***' % machine[0])
             # self.machine[:0] = [idx]
-            # mt = tuple(machine)
-            logger.info(len(machinex))
-            cursor.execute(sql, machinex)
+            mt = tuple(machine)
+            logger.info(len(machine))
+            cursor.execute(sql, mt)
             return cursor.lastrowid
         else:
             logger.warn('Machine found with name %s already exits in the database' % (self.machine[0]))
             logger.warn('*** EXITING THE SCRIPT ***')
             sys.exit()
 
-    def add_software(self, conn, sw, machid):
+    def add_software(self, sw, machid):
         """
         Add Software for machine
-        :param conn:
         :param sw:
+        :param machid:
         :return:
         """
+
+        conn, cursor = self.get_connection()
+        if conn is None:
+            logger.info("Could not get connection")
+            sys.exit()
 
         sql = ''' INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id)
             VALUES (?,?,?,?,?,?) '''
         logger.info('SQL INSERT for software: ' + sql)
-        cur = conn.cursor()
         # Iterate through software list of dictionaries
         for d in software:
             logger.info(d)
@@ -189,7 +193,10 @@ class GetSysInformation:
                 if key == 'DisplayName':
                     dnv = value
                 elif key == 'DisplayVersion':
-                    dvv = value
+                    if key:
+                        dvv = value
+                    else:
+                        dvv = None
                 elif key == 'InstallDate':
                     if key:
                         instd = value
@@ -201,23 +208,34 @@ class GetSysInformation:
                     cd = value
                 elif key == 'machine_id':
                     mid = value
-        sqlval = [dnv, dvv, instd, cd, upd, mid]
-        cur.execute(sql, sqlval)
-        return cur.lastrowid
+            sqlval = [dnv, dvv, instd, cd, upd, mid]
+            sqlvaltup = tuple(sqlval)
+            cursor.execute(sql, sqlvaltup)
+        return cursor.lastrowid
 
-    def add_hardware(self, conn, hw):
+    def add_hardware(self, hw):
         """
         Add Hardware for machine
-        :param conn:
         :param hw:
         :return:
         """
 
+        conn, cursor = self.get_connection()
+        if conn is None:
+            logger.info("Could not get connection")
+            sys.exit()
+
         sql = ''' INSERT INTO hardware(logical_drives,logical_drives_free_space,processor,physical_mem,machine_id,created_date,updated_date)
             VALUES(?,?,?,?,?,?,?) '''
-        cur = conn.cursor()
-        cur.execute(sql, hardware)
-        return cur.lastrowid
+        self.hardware.append(SysObj.processor)
+        self.hardware.append(SysObj.ramtot)
+        self.hardware.append(machine_id)
+        createddate = datetime.date.today()
+        updateddate = datetime.date.today()
+        self.hardware.extend([str(createddate), str(updateddate)])
+        hwtup = tuple(hw)
+        cursor.execute(sql, hwtup)
+        return cursor.lastrowid
 
     # Utility Methods
 
@@ -344,13 +362,12 @@ class GetSysInformation:
         self.machine.extend([self.DomainName, self.UserName, self.dellservtag])
         self.get_bios()
         # self.get_bitlocker()
-
-
         # Add to hardware tuple variable
         self.drives = win32api.GetLogicalDriveStrings()
         self.dfs = self.get_free_disk_space()
         self.get_ram()
-        self.hardware.append([self.drives, self.dfs, self.ramtot])
+        self.hardware.append(self.drives)
+        self.hardware.append(self.dfs[1])
 
     def getlinuxinfo(self):
         print 'Linux'
@@ -458,70 +475,37 @@ if __name__ == '__main__':
     logger.info('Logging Setup Complete')
     logger.info(DBFILE)
     SysObj.getsysinfo()
-
-    machinex = (
-                    'DESKTOP-0104G2XYS',
-                    'Windows-10-10.0.15063',
-                    'SEMA4GENOMICS',
-                    'hal.riker',
-                    'JGC7GH2',
-                    'Dell',
-                    'XPS',
-                    'XPS 15 9560',
-                    '1.5.0',
-                    '08/30/2017',
-                    '10/26/2017',
-                    '10/26/2017'
-    )
-
     # create machine table
     SysObj.create_table(sql_create_machine_table)
     # create hardware table
     SysObj.create_table(sql_create_hardware_table)
     # create software table
     SysObj.create_table(sql_create_software_table)
-    # SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
-    # SysObj.create_connection()
-    machine_id = SysObj.add_machine(machinex)
-    SysObj.getSoftwareList(machine_id)
-    software = SysObj.instsoft
-    SysObj.add_software(SysObj.conn, software, machine_id)
 
-    # INSERT HARDWARE
-    hardware = (
-        'C:',
-        '76%',
-        'Intel64 Family 6 Model 158 Stepping 9, GenuineIntel',
-        '17GB',
-        machine_id,
-        '10/26/2017',
-        '10/26/2017'
-    )
-
-    SysObj.add_hardware(SysObj.conn, hardware)
-
+    # Log Machine Info
+    logger.info('Computer Name: ' + SysObj.machname)
+    logger.info('Operating System: ' + SysObj.osbuild)
+    logger.info('Domain Name: ' + SysObj.DomainName)
+    logger.info('User Name: ' + SysObj.UserName)
+    logger.info('The servie tag is ' + SysObj.get_service_tag())
     logger.info('System Manufacteur: ' + SysObj.sysmanuf)
     logger.info('System Family: ' + SysObj.sysfam)
     logger.info('System Model: ' + SysObj.sysprod)
     logger.info('BIOS Version: ' + SysObj.biosver)
     logger.info('BIOS Release Date: ' + SysObj.biosrel)
-    logger.info('The servie tag is ' + SysObj.get_service_tag())
+
+    # Add PC to machine table
+    machinex = SysObj.machine
+    machine_id = SysObj.add_machine(machinex)
+    # Get installed software and add to software table
+    SysObj.getSoftwareList(machine_id)
+    software = SysObj.instsoft
+    SysObj.add_software(software, machine_id)
+    # INSERT HARDWARE INTO hardware table
+    logger.info('Logical Drives: ' + SysObj.drives)
     # Parse dfs to just percent as string
     logger.info(SysObj.get_free_disk_space())
-    logger.info('Operating System: ' + SysObj.osbuild)
-    logger.info('Computer Name: ' + SysObj.machname)
-    logger.info('Domain Name: ' + SysObj.DomainName)
-    logger.info('User Name: ' + SysObj.UserName)
-    logger.info('Logical Drives: ' + SysObj.drives)
     logger.info('Processor: ' + SysObj.processor)
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
-    # Get Installed Software from the Windows Registry
-
-    # Future write instsoft to database
-
-    # Ethernet NIC
-    # Wireless NIC
-    # IP Address
-    # BIT LOCKER INFO
-    # System Processes/Software
+    SysObj.add_hardware(SysObj.hardware)
     logger.info('*** PROCESSING COMPLETE ***')
