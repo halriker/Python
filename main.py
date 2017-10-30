@@ -13,6 +13,7 @@ import _winreg
 import errno
 import sqlite3
 from sqlite3 import Error
+import datetime
 
 
 if os.name == 'posix' and sys.version_info[0] < 3:
@@ -20,24 +21,26 @@ if os.name == 'posix' and sys.version_info[0] < 3:
 else:
     import subprocess
 
+DBFILE = os.getcwd() + '\sqlite\pythonsqlite.db'
+
 sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
     									id integer PRIMARY KEY,
     									machine_name text NOT NULL UNIQUE,
     									operating_system text NOT NULL,	
     									domain_name text,
     									user_name text,
+    									serial_no text,
     									manufacteur text,
     									family text,
     									model text,
     									bios_ver text,
     									bios_rel_date text,
-    									serial_no text,
     									created_date text NOT NULL,
     									updated_date text NOT NULL
     								); """
 
 sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
-                            id integer PRIMARY KEY,
+                            id integer auto_increment PRIMARY KEY,
                             software_name text NOT NULL,
                             version text,
                             install_date text,
@@ -48,7 +51,7 @@ sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
                         ); """
 
 sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
-                                    id integer PRIMARY KEY,						
+                                    id integer auto_increment PRIMARY KEY,						
                                     logical_drives text,
                                     logical_drives_free_space text,
                                     processor text,
@@ -67,12 +70,17 @@ class GetSysInformation:
         self.pwd = os.getcwd()
         self.conn = None
         self.sqlitever = None
+        self.machine = []
+        self.software = []
+        self.hardware = []
 
         # Cross Platform Attributes
         self.mysys = platform.system()
         self.machname = platform.node()
-        self.processor = platform.processor()
+        self.machine.append(self.machname)
         self.osbuild = platform.platform()
+        self.machine.append(self.osbuild)
+        self.processor = platform.processor()
         self.drives = None
 
         # Windows Attributes
@@ -106,52 +114,59 @@ class GetSysInformation:
 
     # Database Methods
 
-    def create_connection(self, db_file):
+    def get_connection(self):
         """ create a database connection to a SQLite database """
-        try:
-            self.conn = sqlite3.connect(db_file)
-            self.sqlitever = sqlite3.version
-            logger.info('SQLite Version: ' + self.sqlitever)
-        except Error as e:
-            logger.info(e)
-        # finally:
-        #     self.conn.close()
-        #     logger.info('SQLite DB Connection Closed')
+        conn = sqlite3.connect(DBFILE, isolation_level=None)
+        cursor = conn.cursor()
+        return conn, cursor
 
-    def create_table(self, conn, create_table_sql):
+
+    def create_table(self, create_table_sql):
         """ create a table from the create_table_sql statement
         :param conn: Connection object
         :param create_table_sql: a CREATE TABLE statement
         :return:
         """
-        try:
-            c = conn.cursor()
-            c.execute(create_table_sql)
-        except Error as e:
-            print(e)
 
-    def add_machine(self, conn, machine):
+        conn, cursor = self.get_connection()
+        if conn is None:
+            logger.info("Could not get connection")
+            cursor.execute(create_table_sql)
+
+    def add_machine(self, machine):
         """
         Add new machine into the machine table
         :param conn:
         :param machine:
         :return: machine id
         """
-        sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,manufacteur,family,model,bios_ver,bios_rel_date,serial_no,created_date,updated_date)
+
+        conn, cursor = self.get_connection()
+        if conn is None:
+            logger.info("Could not get connection")
+        # createddate = datetime.date.today()
+        # updateddate = datetime.date.today()
+        # self.machine.extend([str(createddate), str(updateddate)])
+
+        sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,serial_no,manufacteur,family,model,bios_ver,bios_rel_date,created_date,updated_date) 
                   VALUES(?,?,?,?,?,?,?,?,?,?,?,?) '''
-        cur = conn.cursor()
-        cur.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machine[0],))
-        data = cur.fetchall()
+
+        cursor.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machinex[0],))
+        logger.info(machinex[0])
+        data = cursor.fetchall()
         if len(data) == 0:
-            logger.info('*** Adding machine named %s to the database ***' % machine[0])
-            cur.execute(sql, machine)
-            return cur.lastrowid
+            logger.info('*** Adding machine named %s to the database ***' % machinex[0])
+            # self.machine[:0] = [idx]
+            # mt = tuple(machine)
+            logger.info(len(machinex))
+            cursor.execute(sql, machinex)
+            return cursor.lastrowid
         else:
-            logger.warn('Machine found with name %s already exits in the database' % (machine[0]))
+            logger.warn('Machine found with name %s already exits in the database' % (self.machine[0]))
             logger.warn('*** EXITING THE SCRIPT ***')
             sys.exit()
 
-    def add_software(self, conn, sw):
+    def add_software(self, conn, sw, machid):
         """
         Add Software for machine
         :param conn:
@@ -160,9 +175,34 @@ class GetSysInformation:
         """
 
         sql = ''' INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id)
-            VALUES(?,?,?,?,?,?) '''
+            VALUES (?,?,?,?,?,?) '''
+        logger.info('SQL INSERT for software: ' + sql)
         cur = conn.cursor()
-        cur.execute(sql, software)
+        # Iterate through software list of dictionaries
+        for d in software:
+            logger.info(d)
+
+            # obtain the value of the key
+            for key, value in d.iteritems():
+                logger.info(value)
+                # Add to value to list so it is ordered? or array?
+                if key == 'DisplayName':
+                    dnv = value
+                elif key == 'DisplayVersion':
+                    dvv = value
+                elif key == 'InstallDate':
+                    if key:
+                        instd = value
+                    else:
+                        instd = None
+                elif key == 'updateddate':
+                    upd = value
+                elif key == 'createddate':
+                    cd = value
+                elif key == 'machine_id':
+                    mid = value
+        sqlval = [dnv, dvv, instd, cd, upd, mid]
+        cur.execute(sql, sqlval)
         return cur.lastrowid
 
     def add_hardware(self, conn, hw):
@@ -297,14 +337,20 @@ class GetSysInformation:
             logger.error('Operating System Not Supported!!!')
 
     def getwininfo(self):
+        # Add to machine tuple variable
         self.DomainName = win32api.GetDomainName()
         self.UserName = win32api.GetUserName()
-        self.drives = win32api.GetLogicalDriveStrings()
         self.dellservtag = self.get_service_tag()
-        self.dfs = self.get_free_disk_space()
+        self.machine.extend([self.DomainName, self.UserName, self.dellservtag])
         self.get_bios()
-        self.get_ram()
         # self.get_bitlocker()
+
+
+        # Add to hardware tuple variable
+        self.drives = win32api.GetLogicalDriveStrings()
+        self.dfs = self.get_free_disk_space()
+        self.get_ram()
+        self.hardware.append([self.drives, self.dfs, self.ramtot])
 
     def getlinuxinfo(self):
         print 'Linux'
@@ -340,6 +386,7 @@ class GetSysInformation:
         self.sysprod = get("SystemProductName")
         self.biosver = get("BIOSVersion")
         self.biosrel = get("BIOSReleaseDate")
+        self.machine.extend([self.sysmanuf, self.sysfam, self.sysprod, self.biosver, self.biosrel])
 
     def get_ram(self):
         computer = wmi.WMI()
@@ -361,9 +408,12 @@ class GetSysInformation:
             logger.log('f')
             self.bitlocker = ""
 
-    def getSoftwareList(self):
+    def getSoftwareList(self, machineid):
 
         key = r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
+        createddate = datetime.date.today()
+        updateddate = datetime.date.today()
+        mid = machineid
 
         for sub_key in self.get_sub_keys(key):
             path = self.join(key, sub_key)
@@ -371,11 +421,10 @@ class GetSysInformation:
 
             if value:
                 logger.info(value)
-                # for k, v in value.iteritems():
-                #     print k
-                #     print v
-                self.instsoft.append(value)
-
+                value['createddate'] = str(createddate)
+                value['updateddate'] = str(updateddate)
+                value['machine_id'] = mid
+                self.instsoft.extend([value])
 
     def openFile(self):
         try:
@@ -398,7 +447,6 @@ class GetSysInformation:
             print "Exceptions in closeFile"
 
 
-
 if __name__ == '__main__':
 
     LOG_CFG = 'C:/Users/hal.riker.SEMA4GENOMICS/PycharmProjects/SysInfo/logging.yaml'
@@ -408,63 +456,49 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
+    logger.info(DBFILE)
     SysObj.getsysinfo()
 
-    try:
-        SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
-    except Exception, e:
-        print 'error' + e
-    finally:
-        # create machine table
-        SysObj.create_table(SysObj.conn, sql_create_machine_table)
-        # create hardware table
-        SysObj.create_table(SysObj.conn, sql_create_hardware_table)
-        # create software table
-        SysObj.create_table(SysObj.conn, sql_create_software_table)
+    machinex = (
+                    'DESKTOP-0104G2XYS',
+                    'Windows-10-10.0.15063',
+                    'SEMA4GENOMICS',
+                    'hal.riker',
+                    'JGC7GH2',
+                    'Dell',
+                    'XPS',
+                    'XPS 15 9560',
+                    '1.5.0',
+                    '08/30/2017',
+                    '10/26/2017',
+                    '10/26/2017'
+    )
 
-    with SysObj.conn:
+    # create machine table
+    SysObj.create_table(sql_create_machine_table)
+    # create hardware table
+    SysObj.create_table(sql_create_hardware_table)
+    # create software table
+    SysObj.create_table(sql_create_software_table)
+    # SysObj.create_connection(os.getcwd() + "\sqlite\pythonsqlite.db")
+    # SysObj.create_connection()
+    machine_id = SysObj.add_machine(machinex)
+    SysObj.getSoftwareList(machine_id)
+    software = SysObj.instsoft
+    SysObj.add_software(SysObj.conn, software, machine_id)
 
-        machine = (
-            'DESKTOP-0104G2N',
-            'Windows-10-10.0.15063',
-            'SEMA4GENOMICS',
-            'hal.riker',
-            'Dell',
-            'XPS',
-            'XPS 15 9560',
-            '1.5.0',
-            '08/30/2017',
-            'JGC7GH2',
-            '10/26/2017',
-            '10/26/2017'
-        )
+    # INSERT HARDWARE
+    hardware = (
+        'C:',
+        '76%',
+        'Intel64 Family 6 Model 158 Stepping 9, GenuineIntel',
+        '17GB',
+        machine_id,
+        '10/26/2017',
+        '10/26/2017'
+    )
 
-        machine_id = SysObj.add_machine(SysObj.conn, machine)
-
-        # INSERT SOFTWARE
-        software = (
-            'Microsoft Azure Compute Emulator - v2.9.5.3',
-            '2.9.8699.20',
-            '10/20/2017',
-            '10/26/2017',
-            '10/26/2017',
-            machine_id
-        )
-
-        SysObj.add_software(SysObj.conn, software)
-
-        # INSERT HARDWARE
-        hardware = (
-            'C:',
-            '76%',
-            'Intel64 Family 6 Model 158 Stepping 9, GenuineIntel',
-            '17GB',
-            machine_id,
-            '10/26/2017',
-            '10/26/2017'
-        )
-
-        SysObj.add_hardware(SysObj.conn, hardware)
+    SysObj.add_hardware(SysObj.conn, hardware)
 
     logger.info('System Manufacteur: ' + SysObj.sysmanuf)
     logger.info('System Family: ' + SysObj.sysfam)
@@ -482,7 +516,6 @@ if __name__ == '__main__':
     logger.info('Processor: ' + SysObj.processor)
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
     # Get Installed Software from the Windows Registry
-    SysObj.getSoftwareList()
 
     # Future write instsoft to database
 
