@@ -1,0 +1,1087 @@
+2017-10-31 14:12:06,190 - __main__ - INFO - Logging Configuration File Path: C:\Users\hal.riker.SEMA4GENOMICS\PycharmProjects\SysInfo\dist\sqlite\logging.yaml
+2017-10-31 14:12:06,190 - __main__ - INFO - Logging Setup Complete
+2017-10-31 14:12:06,191 - __main__ - INFO - DBFILE Path: C:\Users\hal.riker.SEMA4GENOMICS\PycharmProjects\SysInfo\dist\sqlite\pythonsqlite.db
+2017-10-31 14:12:06,193 - __main__ - INFO - Windows Operating System Detected
+2017-10-31 14:12:06,233 - __main__ - INFO - *** Gathering System BIOS Information From HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\BIOS ***
+2017-10-31 14:12:06,403 - __main__ - INFO - Computer Name: DESKTOP-0104G2N
+2017-10-31 14:12:06,404 - __main__ - INFO - Operating System: Windows-10-10.0.15063
+2017-10-31 14:12:06,404 - __main__ - INFO - Domain Name: SEMA4GENOMICS
+2017-10-31 14:12:06,404 - __main__ - INFO - User Name: hal.riker
+2017-10-31 14:12:06,437 - __main__ - INFO - The servie tag is JGC7GH2
+2017-10-31 14:12:06,437 - __main__ - INFO - System Manufacteur: Dell Inc.
+2017-10-31 14:12:06,440 - __main__ - INFO - System Family: XPS
+2017-10-31 14:12:06,441 - __main__ - INFO - System Model: XPS 15 9560
+2017-10-31 14:12:06,443 - __main__ - INFO - BIOS Version: 1.5.0
+2017-10-31 14:12:06,444 - __main__ - INFO - BIOS Release Date: 08/30/2017
+2017-10-31 14:12:06,446 - __main__ - INFO - DESKTOP-0104G2N
+2017-10-31 14:12:06,446 - __main__ - INFO - *** Adding machine named DESKTOP-0104G2N to the database ***
+2017-10-31 14:12:06,453 - __main__ - INFO - 12
+2017-10-31 14:12:06,471 - __main__ - INFO - {'DisplayVersion': u'2.9.8699.20', 'DisplayName': u'Microsoft Azure Compute Emulator - v2.9.5.3', 'InstallDate': u'10/20/2017'}
+2017-10-31 14:12:06,473 - __main__ - INFO - {'DisplayVersion': u'7.5.1', 'DisplayName': u'Notepad++ (64-bit x64)'}
+2017-10-31 14:12:06,473 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'DisplayName': u'Microsoft Office 365 ProPlus - en-us'}
+2017-10-31 14:12:06,493 - __main__ - INFO - {'DisplayVersion': u'1.3.6855.212', 'DisplayName': u'Dell SupportAssist'}
+2017-10-31 14:12:06,512 - __main__ - INFO - {'DisplayVersion': u'9.6', 'DisplayName': u'PostgreSQL', 'InstallDate': 1505428276}
+2017-10-31 14:12:06,532 - __main__ - INFO - {'DisplayVersion': u'4.4.0', 'DisplayName': u'Python 3.6.1 (Anaconda3 4.4.0 64-bit)'}
+2017-10-31 14:12:06,532 - __main__ - INFO - {'DisplayName': u'Python 2.7 pywin32-221'}
+2017-10-31 14:12:06,553 - __main__ - INFO - {'DisplayName': u'Sublime Text Build 3143', 'InstallDate': u'20170914'}
+2017-10-31 14:12:06,553 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'DisplayName': u'Microsoft Visio Professional 2016 - en-us'}
+2017-10-31 14:12:06,573 - __main__ - INFO - {'DisplayVersion': u'1.0.33.0', 'DisplayName': u'Vulkan Run Time Libraries 1.0.33.0'}
+2017-10-31 14:12:06,575 - __main__ - INFO - {'DisplayVersion': u'1.0.42.1', 'DisplayName': u'Vulkan Run Time Libraries 1.0.42.1'}
+2017-10-31 14:12:06,595 - __main__ - INFO - {'DisplayVersion': u'15.117.26914', 'DisplayName': u'Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration Language Pack (x64) - ENU', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,612 - __main__ - INFO - {'DisplayVersion': u'3.3.2.1988', 'DisplayName': u'Microsoft R Client', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,632 - __main__ - INFO - {'DisplayVersion': u'2.7.14150', 'DisplayName': u'Python 2.7.14 (64-bit)', 'InstallDate': u'20171016'}
+2017-10-31 14:12:06,634 - __main__ - INFO - {'DisplayVersion': u'4.0.7848.0', 'DisplayName': u'Box Sync', 'InstallDate': u'20170912'}
+2017-10-31 14:12:06,651 - __main__ - INFO - {'DisplayName': u'IIS Express Application Compatibility Database for x64'}
+2017-10-31 14:12:06,651 - __main__ - INFO - {'DisplayVersion': u'2.9.8699.20', 'DisplayName': u'Microsoft Azure Authoring Tools - v2.9.5.3', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,671 - __main__ - INFO - {'DisplayVersion': u'10.1.16299.15', 'DisplayName': u'Windows App Certification Kit Native Components', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,673 - __main__ - INFO - {'DisplayVersion': u'6.3.9600.85', 'DisplayName': u'Realtek USB Audio'}
+2017-10-31 14:12:06,693 - __main__ - INFO - {'DisplayVersion': u'1.1.71.1354', 'DisplayName': u'Killer Bandwidth Control Filter Driver', 'InstallDate': u'20170902'}
+2017-10-31 14:12:06,694 - __main__ - INFO - {'DisplayVersion': u'5.1.28', 'DisplayName': u'Oracle VM VirtualBox 5.1.28', 'InstallDate': u'20170919'}
+2017-10-31 14:12:06,713 - __main__ - INFO - {'DisplayVersion': u'15.0.26621', 'DisplayName': u'vs_Graphics_Singletonx64', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,730 - __main__ - INFO - {'DisplayVersion': u'11.3.6518.0', 'DisplayName': u'Microsoft SQL Server 2012 Native Client ', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,750 - __main__ - INFO - {'DisplayVersion': u'10.1.15063.468', 'DisplayName': u'Windows SDK for Windows Store Apps DirectX x64 Remote', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,750 - __main__ - INFO - {'DisplayVersion': u'11.7.0.1035', 'DisplayName': u'Intel(R) Management Engine Components'}
+2017-10-31 14:12:06,767 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Standard Library (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,769 - __main__ - INFO - {'DisplayVersion': u'8.0.39737', 'DisplayName': u'Microsoft .NET Core SDK - 2.0.2 (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,788 - __main__ - INFO - {'DisplayVersion': u'1.0.0.0', 'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009'}
+2017-10-31 14:12:06,789 - __main__ - INFO - {'DisplayVersion': u'3.1.1.3832', 'DisplayName': u'Dell Update - SupportAssist Update Plugin', 'InstallDate': u'20170929'}
+2017-10-31 14:12:06,809 - __main__ - INFO - {'DisplayVersion': u'6.2.0', 'DisplayName': u'Intel\xae Hardware Accelerated Execution Manager', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,809 - __main__ - INFO - {'DisplayVersion': u'8.0.1440.1', 'DisplayName': u'Java 8 Update 144 (64-bit)', 'InstallDate': u'20170925'}
+2017-10-31 14:12:06,831 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Tcl/Tk Support (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,848 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Standard Library (64-bit symbols)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,871 - __main__ - INFO - {'DisplayVersion': u'10.1.15063.468', 'DisplayName': u'Application Verifier x64 External Package', 'InstallDate': u'20170927'}
+2017-10-31 14:12:06,874 - __main__ - INFO - {'DisplayVersion': u'4.4.2.0', 'DisplayName': u'Dell Data Vault', 'InstallDate': u'20170902'}
+2017-10-31 14:12:06,903 - __main__ - INFO - {'DisplayVersion': u'2.7.9233.1', 'DisplayName': u'Maxx Audio Installer (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,921 - __main__ - INFO - {'DisplayVersion': u'15.0.26823', 'DisplayName': u'DiagnosticsHub_CollectionService', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,928 - __main__ - INFO - {'DisplayVersion': u'15.7.5.1025', 'DisplayName': u'Intel(R) Rapid Storage Technology'}
+2017-10-31 14:12:06,944 - __main__ - INFO - {'DisplayVersion': u'2.5.23.0', 'DisplayName': u'Dell Help & Support', 'InstallDate': u'20171025'}
+2017-10-31 14:12:06,964 - __main__ - INFO - {'DisplayVersion': u'0.70.0.0', 'DisplayName': u'PuTTY release 0.70 (64-bit)', 'InstallDate': u'20170925'}
+2017-10-31 14:12:06,987 - __main__ - INFO - {'DisplayVersion': u'10.1.16299.15', 'DisplayName': u'Windows SDK for Windows Store Apps DirectX x64 Remote', 'InstallDate': u'20171020'}
+2017-10-31 14:12:06,990 - __main__ - INFO - {'DisplayVersion': u'6.11.3', 'DisplayName': u'Node.js', 'InstallDate': u'20170914'}
+2017-10-31 14:12:07,016 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 pip Bootstrap (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,039 - __main__ - INFO - {'DisplayVersion': u'13.1.4001.0', 'DisplayName': u'Active Directory Authentication Library for SQL Server', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,043 - __main__ - INFO - {'DisplayVersion': u'2.0.11926.0', 'DisplayName': u'Microsoft ASP.NET Core 2.0.0 Runtime Package Store (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,046 - __main__ - INFO - {'DisplayVersion': u'1.1.71.1354', 'DisplayName': u'Killer Network Manager', 'InstallDate': u'20170902'}
+2017-10-31 14:12:07,061 - __main__ - INFO - {'DisplayVersion': u'3.06.007', 'DisplayName': u'Dell PremierColor'}
+2017-10-31 14:12:07,081 - __main__ - INFO - {'DisplayVersion': u'10.0.0.279', 'DisplayName': u'Qualcomm Atheros Bluetooth Installer (64)', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,101 - __main__ - INFO - {'DisplayVersion': u'8.0.1440.1', 'DisplayName': u'Java SE Development Kit 8 Update 144 (64-bit)', 'InstallDate': u'20170925'}
+2017-10-31 14:12:07,102 - __main__ - INFO - {'DisplayVersion': u'1.1.71.1354', 'DisplayName': u'Killer Wireless-AC Drivers', 'InstallDate': u'20170902'}
+2017-10-31 14:12:07,122 - __main__ - INFO - {'DisplayVersion': u'10.0.1981', 'DisplayName': u'Microsoft Web Deploy 3.6', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,125 - __main__ - INFO - {'DisplayVersion': u'1.0.1982', 'DisplayName': u'Microsoft ASP.NET Core Module for IIS Express', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,148 - __main__ - INFO - {'DisplayVersion': u'15.7.5.1025', 'DisplayName': u'Intel(R) Rapid Storage Technology', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,167 - __main__ - INFO - {'DisplayVersion': u'15.0.26621', 'DisplayName': u'icecap_collection_x64', 'InstallDate': u'20170927'}
+2017-10-31 14:12:07,184 - __main__ - INFO - {'DisplayVersion': u'15.117.26914', 'DisplayName': u'Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,187 - __main__ - INFO - {'DisplayVersion': u'1.12.111.1002', 'DisplayName': u'Microsoft Visual Studio 2017', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,207 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Test Suite (64-bit symbols)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,207 - __main__ - INFO - {'DisplayVersion': u'16.0.71.0', 'DisplayName': u'VS JIT Debugger', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,227 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Development Libraries (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,247 - __main__ - INFO - {'DisplayVersion': u'1.0.0.0', 'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009'}
+2017-10-31 14:12:07,266 - __main__ - INFO - {'DisplayVersion': u'10.1.1.38', 'DisplayName': u'Intel(R) Chipset Device Software', 'InstallDate': u'20170902'}
+2017-10-31 14:12:07,269 - __main__ - INFO - {'DisplayVersion': u'7.1.12437.25', 'DisplayName': u'Microsoft MPI (7.1.12437.25)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,293 - __main__ - INFO - {'DisplayVersion': u'13.0.1601.5', 'DisplayName': u'Microsoft AS OLE DB Provider for SQL Server 2016', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,295 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'DisplayName': u'Office 16 Click-to-Run Licensing Component', 'InstallDate': u'20171021'}
+2017-10-31 14:12:07,315 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'DisplayName': u'Office 16 Click-to-Run Extensibility Component', 'InstallDate': u'20171021'}
+2017-10-31 14:12:07,345 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2075', 'DisplayName': u'Office 16 Click-to-Run Localization Component', 'InstallDate': u'20170919'}
+2017-10-31 14:12:07,365 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Utility Scripts (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,401 - __main__ - INFO - {'DisplayVersion': u'13.1.4001.0', 'DisplayName': u'Microsoft SQL Server 2016 LocalDB ', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,401 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Executables (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,423 - __main__ - INFO - {'DisplayVersion': u'11.3.6020.0', 'DisplayName': u'Microsoft SQL Server 2012 Command Line Utilities ', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,424 - __main__ - INFO - {'DisplayVersion': u'1.0.0.0', 'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009'}
+2017-10-31 14:12:07,457 - __main__ - INFO - {'DisplayVersion': u'12.0.21005', 'DisplayName': u'Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005', 'InstallDate': u'20170902'}
+2017-10-31 14:12:07,457 - __main__ - INFO - {'DisplayVersion': u'12.0.0.0', 'DisplayName': u'Microsoft VC++ redistributables repacked.', 'InstallDate': u'20171009'}
+2017-10-31 14:12:07,474 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Core Interpreter (64-bit symbols)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,476 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Documentation (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,505 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Tcl/Tk Support (64-bit symbols)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,506 - __main__ - INFO - {'DisplayVersion': u'14.0.600.250', 'DisplayName': u'Microsoft System CLR Types for SQL Server 2017 CTP2.1', 'InstallDate': u'20170927'}
+2017-10-31 14:12:07,523 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Test Suite (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,523 - __main__ - INFO - {'DisplayVersion': u'10.0.1738', 'DisplayName': u'IIS 10.0 Express', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,543 - __main__ - INFO - {'DisplayVersion': u'10.1.16299.15', 'DisplayName': u'Windows SDK DirectX x64 Remote', 'InstallDate': u'20171020'}
+2017-10-31 14:12:07,562 - __main__ - INFO - {'DisplayVersion': u'12.0.21005', 'DisplayName': u'Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005', 'InstallDate': u'20170902'}
+2017-10-31 14:12:07,582 - __main__ - INFO - {'DisplayVersion': u'16.0.71.0', 'DisplayName': u'VS Script Debugging Common', 'InstallDate': u'20170927'}
+2017-10-31 14:12:07,582 - __main__ - INFO - {'DisplayName': u'IIS Express Application Compatibility Database for x86'}
+2017-10-31 14:12:07,609 - __main__ - INFO - {'DisplayVersion': u'14.11.25325', 'DisplayName': u'Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.11.25325', 'InstallDate': u'20170927'}
+2017-10-31 14:12:07,611 - __main__ - INFO - {'DisplayVersion': u'14.11.25325', 'DisplayName': u'Microsoft Visual C++ 2017 x64 Additional Runtime - 14.11.25325', 'InstallDate': u'20170927'}
+2017-10-31 14:12:07,634 - __main__ - INFO - {'DisplayVersion': u'384.77', 'DisplayName': u'Ansel', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,654 - __main__ - INFO - {'DisplayVersion': u'384.77', 'DisplayName': u'NVIDIA 3D Vision Driver 384.77', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,655 - __main__ - INFO - {'DisplayVersion': u'384.77', 'DisplayName': u'NVIDIA Control Panel 384.77', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,677 - __main__ - INFO - {'DisplayVersion': u'384.77', 'DisplayName': u'NVIDIA Graphics Driver 384.77', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,698 - __main__ - INFO - {'DisplayVersion': u'3.6.0.74', 'DisplayName': u'NVIDIA GeForce Experience 3.6.0.74', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,717 - __main__ - INFO - {'DisplayVersion': u'25.0.0.0', 'DisplayName': u'NVIDIA Optimus Update 25.0.0.0', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,719 - __main__ - INFO - {'DisplayVersion': u'9.17.0329', 'DisplayName': u'NVIDIA PhysX System Software 9.17.0329', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,740 - __main__ - INFO - {'DisplayVersion': u'25.0.0.0', 'DisplayName': u'NVIDIA Update 25.0.0.0', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,740 - __main__ - INFO - {'DisplayVersion': u'7.1.0370', 'DisplayName': u'SHIELD Streaming', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,763 - __main__ - INFO - {'DisplayVersion': u'2.1002.248.2111', 'DisplayName': u'NVIDIA Install Application', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,782 - __main__ - INFO - {'DisplayVersion': u'25.0.0.0', 'DisplayName': u'NVIDIA Backend', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,799 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,818 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA LocalSystem Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,821 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA Message Bus for NvContainer', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,842 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA NetworkService Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,842 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA Session Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,871 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA User Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,872 - __main__ - INFO - {'DisplayVersion': u'1.2', 'DisplayName': u'NVIDIA Display Container', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,891 - __main__ - INFO - {'DisplayVersion': u'1.2', 'DisplayName': u'NVIDIA Display Container LS', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,891 - __main__ - INFO - {'DisplayVersion': u'1.2', 'DisplayName': u'NVIDIA Display Watchdog Plugin', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,917 - __main__ - INFO - {'DisplayVersion': u'1.2', 'DisplayName': u'NVIDIA Display Session Container', 'InstallDate': u'20171017'}
+2017-10-31 14:12:07,933 - __main__ - INFO - {'DisplayVersion': u'3.6.0.74', 'DisplayName': u'NvNodejs', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,950 - __main__ - INFO - {'DisplayVersion': u'1.4', 'DisplayName': u'NVIDIA Watchdog Plugin for NvContainer', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,950 - __main__ - INFO - {'DisplayVersion': u'2.4.10.0', 'DisplayName': u'NvTelemetry', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,971 - __main__ - INFO - {'DisplayVersion': u'2.4.10.0', 'DisplayName': u'NVIDIA Telemetry Container', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,973 - __main__ - INFO - {'DisplayVersion': u'2.02.0.5', 'DisplayName': u'NvvHci', 'InstallDate': u'20170929'}
+2017-10-31 14:12:07,996 - __main__ - INFO - {'DisplayVersion': u'3.6.0.74', 'DisplayName': u'Nvidia Share', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,015 - __main__ - INFO - {'DisplayVersion': u'3.6.0.74', 'DisplayName': u'NVIDIA ShadowPlay 3.6.0.74', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,033 - __main__ - INFO - {'DisplayVersion': u'3.6.0.74', 'DisplayName': u'SHIELD Wireless Controller Driver', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,035 - __main__ - INFO - {'DisplayVersion': u'25.0.0.0', 'DisplayName': u'NVIDIA Update Core', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,055 - __main__ - INFO - {'DisplayVersion': u'3.70.2', 'DisplayName': u'NVIDIA Virtual Audio 3.70.2', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,056 - __main__ - INFO - {'DisplayVersion': u'2.9.8699.20', 'DisplayName': u'Microsoft Azure Compute Emulator - v2.9.5.3', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,081 - __main__ - INFO - {'DisplayVersion': u'16.0.25521', 'DisplayName': u'Microsoft .NET Core Runtime - 2.0.0 (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,105 - __main__ - INFO - {'DisplayVersion': u'14.11.25325', 'DisplayName': u'Microsoft Visual C++ 2017 x64 Debug Runtime - 14.11.25325', 'InstallDate': u'20170927'}
+2017-10-31 14:12:08,108 - __main__ - INFO - {'DisplayVersion': u'3.0.0127.060', 'DisplayName': u'Microsoft Azure Libraries for .NET \u2013 v2.9', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,130 - __main__ - INFO - {'DisplayVersion': u'16.0.25521', 'DisplayName': u'Microsoft .NET Core Host - 2.0.0 (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,147 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Executables (64-bit symbols)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,165 - __main__ - INFO - {'DisplayVersion': u'10.1.16299.15', 'DisplayName': u'Application Verifier x64 External Package', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,167 - __main__ - INFO - {'DisplayVersion': u'10.0.30319', 'DisplayName': u'Microsoft Visual C++ 2010  x64 Redistributable - 10.0.30319', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,186 - __main__ - INFO - {'DisplayVersion': u'3.6.2150.0', 'DisplayName': u'Python 3.6.2 Core Interpreter (64-bit)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,186 - __main__ - INFO - {'DisplayVersion': u'10.1.16299.15', 'DisplayName': u'Universal CRT Tools x64', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,206 - __main__ - INFO - {'DisplayVersion': u'17.2.2555', 'DisplayName': u'SketchUp 2017', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,207 - __main__ - INFO - {'DisplayVersion': u'1.0.1.0', 'DisplayName': u'Intel(R) ME UninstallLegacy', 'InstallDate': u'20171009'}
+2017-10-31 14:12:08,227 - __main__ - INFO - {'DisplayVersion': u'3.1.1.3834', 'DisplayName': u'Dell SupportAssist Remediation', 'InstallDate': u'20170929'}
+2017-10-31 14:12:08,247 - __main__ - INFO - {'DisplayVersion': u'16.0.71.0', 'DisplayName': u'VS WCF Debugging', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,266 - __main__ - INFO - {'DisplayVersion': u'16.0.25521', 'DisplayName': u'Microsoft .NET Core Host FX Resolver - 2.0.0 (x64)', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,266 - __main__ - INFO - {'DisplayVersion': u'4.0.19', 'DisplayName': u'paint.net', 'InstallDate': u'20171009'}
+2017-10-31 14:12:08,286 - __main__ - INFO - {'DisplayVersion': u'15.0.25.0', 'DisplayName': u'IntelliTraceProfilerProxy', 'InstallDate': u'20171020'}
+2017-10-31 14:12:08,288 - __main__ - INFO - {'DisplayVersion': u'1.45.447.1', 'DisplayName': u'Intel(R) Trusted Connect Service Client', 'InstallDate': u'20171009'}
+2017-10-31 14:12:08,308 - __main__ - INFO - {'DisplayVersion': u'1.3.6855.212', 'DisplayName': u'DSC/AA Factory Installer', 'InstallDate': u'20170902'}
+2017-10-31 14:12:08,309 - __main__ - INFO - SQL INSERT for software:  INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id)
+            VALUES (?,?,?,?,?,?) 
+2017-10-31 14:12:08,328 - __main__ - INFO - {'DisplayName': u'Microsoft Azure Compute Emulator - v2.9.5.3', 'InstallDate': u'10/20/2017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.9.8699.20', 'machine_id': 1}
+2017-10-31 14:12:08,348 - __main__ - INFO - Microsoft Azure Compute Emulator - v2.9.5.3
+2017-10-31 14:12:08,365 - __main__ - INFO - 10/20/2017
+2017-10-31 14:12:08,367 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,388 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,390 - __main__ - INFO - 2.9.8699.20
+2017-10-31 14:12:08,414 - __main__ - INFO - 1
+2017-10-31 14:12:08,480 - __main__ - INFO - {'DisplayVersion': u'7.5.1', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Notepad++ (64-bit x64)', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,482 - __main__ - INFO - 7.5.1
+2017-10-31 14:12:08,483 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,483 - __main__ - INFO - 1
+2017-10-31 14:12:08,486 - __main__ - INFO - Notepad++ (64-bit x64)
+2017-10-31 14:12:08,486 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,505 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Microsoft Office 365 ProPlus - en-us', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,506 - __main__ - INFO - 16.0.8201.2200
+2017-10-31 14:12:08,509 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,510 - __main__ - INFO - 1
+2017-10-31 14:12:08,513 - __main__ - INFO - Microsoft Office 365 ProPlus - en-us
+2017-10-31 14:12:08,522 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,540 - __main__ - INFO - {'DisplayVersion': u'1.3.6855.212', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Dell SupportAssist', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,551 - __main__ - INFO - 1.3.6855.212
+2017-10-31 14:12:08,552 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,571 - __main__ - INFO - 1
+2017-10-31 14:12:08,572 - __main__ - INFO - Dell SupportAssist
+2017-10-31 14:12:08,596 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,640 - __main__ - INFO - {'DisplayName': u'PostgreSQL', 'InstallDate': 1505428276, 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'9.6', 'machine_id': 1}
+2017-10-31 14:12:08,641 - __main__ - INFO - PostgreSQL
+2017-10-31 14:12:08,655 - __main__ - INFO - 1505428276
+2017-10-31 14:12:08,657 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,680 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,700 - __main__ - INFO - 9.6
+2017-10-31 14:12:08,703 - __main__ - INFO - 1
+2017-10-31 14:12:08,740 - __main__ - INFO - {'DisplayVersion': u'4.4.0', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Python 3.6.1 (Anaconda3 4.4.0 64-bit)', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,742 - __main__ - INFO - 4.4.0
+2017-10-31 14:12:08,743 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,770 - __main__ - INFO - 1
+2017-10-31 14:12:08,773 - __main__ - INFO - Python 3.6.1 (Anaconda3 4.4.0 64-bit)
+2017-10-31 14:12:08,796 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,841 - __main__ - INFO - {'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Python 2.7 pywin32-221', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,841 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,842 - __main__ - INFO - 1
+2017-10-31 14:12:08,871 - __main__ - INFO - Python 2.7 pywin32-221
+2017-10-31 14:12:08,878 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,910 - __main__ - INFO - {'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Sublime Text Build 3143', 'InstallDate': u'20170914', 'createddate': '2017-10-31'}
+2017-10-31 14:12:08,911 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:08,936 - __main__ - INFO - 1
+2017-10-31 14:12:08,953 - __main__ - INFO - Sublime Text Build 3143
+2017-10-31 14:12:08,953 - __main__ - INFO - 20170914
+2017-10-31 14:12:08,956 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,003 - __main__ - INFO - {'DisplayVersion': u'16.0.8201.2200', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Microsoft Visio Professional 2016 - en-us', 'createddate': '2017-10-31'}
+2017-10-31 14:12:09,005 - __main__ - INFO - 16.0.8201.2200
+2017-10-31 14:12:09,006 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,028 - __main__ - INFO - 1
+2017-10-31 14:12:09,049 - __main__ - INFO - Microsoft Visio Professional 2016 - en-us
+2017-10-31 14:12:09,069 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,092 - __main__ - INFO - {'DisplayVersion': u'1.0.33.0', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Vulkan Run Time Libraries 1.0.33.0', 'createddate': '2017-10-31'}
+2017-10-31 14:12:09,095 - __main__ - INFO - 1.0.33.0
+2017-10-31 14:12:09,118 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,118 - __main__ - INFO - 1
+2017-10-31 14:12:09,141 - __main__ - INFO - Vulkan Run Time Libraries 1.0.33.0
+2017-10-31 14:12:09,144 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,190 - __main__ - INFO - {'DisplayVersion': u'1.0.42.1', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Vulkan Run Time Libraries 1.0.42.1', 'createddate': '2017-10-31'}
+2017-10-31 14:12:09,191 - __main__ - INFO - 1.0.42.1
+2017-10-31 14:12:09,194 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,220 - __main__ - INFO - 1
+2017-10-31 14:12:09,227 - __main__ - INFO - Vulkan Run Time Libraries 1.0.42.1
+2017-10-31 14:12:09,237 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,260 - __main__ - INFO - {'DisplayName': u'Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration Language Pack (x64) - ENU', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.117.26914', 'machine_id': 1}
+2017-10-31 14:12:09,266 - __main__ - INFO - Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration Language Pack (x64) - ENU
+2017-10-31 14:12:09,266 - __main__ - INFO - 20171020
+2017-10-31 14:12:09,289 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,292 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,312 - __main__ - INFO - 15.117.26914
+2017-10-31 14:12:09,335 - __main__ - INFO - 1
+2017-10-31 14:12:09,358 - __main__ - INFO - {'DisplayName': u'Microsoft R Client', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.3.2.1988', 'machine_id': 1}
+2017-10-31 14:12:09,359 - __main__ - INFO - Microsoft R Client
+2017-10-31 14:12:09,384 - __main__ - INFO - 20171020
+2017-10-31 14:12:09,403 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,404 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,430 - __main__ - INFO - 3.3.2.1988
+2017-10-31 14:12:09,451 - __main__ - INFO - 1
+2017-10-31 14:12:09,474 - __main__ - INFO - {'DisplayName': u'Python 2.7.14 (64-bit)', 'InstallDate': u'20171016', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.7.14150', 'machine_id': 1}
+2017-10-31 14:12:09,476 - __main__ - INFO - Python 2.7.14 (64-bit)
+2017-10-31 14:12:09,503 - __main__ - INFO - 20171016
+2017-10-31 14:12:09,519 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,523 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,548 - __main__ - INFO - 2.7.14150
+2017-10-31 14:12:09,571 - __main__ - INFO - 1
+2017-10-31 14:12:09,595 - __main__ - INFO - {'DisplayName': u'Box Sync', 'InstallDate': u'20170912', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'4.0.7848.0', 'machine_id': 1}
+2017-10-31 14:12:09,596 - __main__ - INFO - Box Sync
+2017-10-31 14:12:09,621 - __main__ - INFO - 20170912
+2017-10-31 14:12:09,625 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,647 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,668 - __main__ - INFO - 4.0.7848.0
+2017-10-31 14:12:09,671 - __main__ - INFO - 1
+2017-10-31 14:12:09,742 - __main__ - INFO - {'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'IIS Express Application Compatibility Database for x64', 'createddate': '2017-10-31'}
+2017-10-31 14:12:09,743 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,744 - __main__ - INFO - 1
+2017-10-31 14:12:09,746 - __main__ - INFO - IIS Express Application Compatibility Database for x64
+2017-10-31 14:12:09,747 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,770 - __main__ - INFO - {'DisplayName': u'Microsoft Azure Authoring Tools - v2.9.5.3', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.9.8699.20', 'machine_id': 1}
+2017-10-31 14:12:09,773 - __main__ - INFO - Microsoft Azure Authoring Tools - v2.9.5.3
+2017-10-31 14:12:09,786 - __main__ - INFO - 20171020
+2017-10-31 14:12:09,788 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,789 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,815 - __main__ - INFO - 2.9.8699.20
+2017-10-31 14:12:09,815 - __main__ - INFO - 1
+2017-10-31 14:12:09,848 - __main__ - INFO - {'DisplayName': u'Windows App Certification Kit Native Components', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.16299.15', 'machine_id': 1}
+2017-10-31 14:12:09,857 - __main__ - INFO - Windows App Certification Kit Native Components
+2017-10-31 14:12:09,858 - __main__ - INFO - 20171020
+2017-10-31 14:12:09,874 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,875 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,875 - __main__ - INFO - 10.1.16299.15
+2017-10-31 14:12:09,875 - __main__ - INFO - 1
+2017-10-31 14:12:09,894 - __main__ - INFO - {'DisplayVersion': u'6.3.9600.85', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Realtek USB Audio', 'createddate': '2017-10-31'}
+2017-10-31 14:12:09,904 - __main__ - INFO - 6.3.9600.85
+2017-10-31 14:12:09,904 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,910 - __main__ - INFO - 1
+2017-10-31 14:12:09,918 - __main__ - INFO - Realtek USB Audio
+2017-10-31 14:12:09,923 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,940 - __main__ - INFO - {'DisplayName': u'Killer Bandwidth Control Filter Driver', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.1.71.1354', 'machine_id': 1}
+2017-10-31 14:12:09,944 - __main__ - INFO - Killer Bandwidth Control Filter Driver
+2017-10-31 14:12:09,946 - __main__ - INFO - 20170902
+2017-10-31 14:12:09,946 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,947 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:09,971 - __main__ - INFO - 1.1.71.1354
+2017-10-31 14:12:09,973 - __main__ - INFO - 1
+2017-10-31 14:12:09,996 - __main__ - INFO - {'DisplayName': u'Oracle VM VirtualBox 5.1.28', 'InstallDate': u'20170919', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'5.1.28', 'machine_id': 1}
+2017-10-31 14:12:10,015 - __main__ - INFO - Oracle VM VirtualBox 5.1.28
+2017-10-31 14:12:10,016 - __main__ - INFO - 20170919
+2017-10-31 14:12:10,016 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,017 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,020 - __main__ - INFO - 5.1.28
+2017-10-31 14:12:10,032 - __main__ - INFO - 1
+2017-10-31 14:12:10,065 - __main__ - INFO - {'DisplayName': u'vs_Graphics_Singletonx64', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.0.26621', 'machine_id': 1}
+2017-10-31 14:12:10,069 - __main__ - INFO - vs_Graphics_Singletonx64
+2017-10-31 14:12:10,069 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,072 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,075 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,075 - __main__ - INFO - 15.0.26621
+2017-10-31 14:12:10,076 - __main__ - INFO - 1
+2017-10-31 14:12:10,108 - __main__ - INFO - {'DisplayName': u'Microsoft SQL Server 2012 Native Client ', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'11.3.6518.0', 'machine_id': 1}
+2017-10-31 14:12:10,111 - __main__ - INFO - Microsoft SQL Server 2012 Native Client 
+2017-10-31 14:12:10,145 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,147 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,148 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,151 - __main__ - INFO - 11.3.6518.0
+2017-10-31 14:12:10,151 - __main__ - INFO - 1
+2017-10-31 14:12:10,174 - __main__ - INFO - {'DisplayName': u'Windows SDK for Windows Store Apps DirectX x64 Remote', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.15063.468', 'machine_id': 1}
+2017-10-31 14:12:10,174 - __main__ - INFO - Windows SDK for Windows Store Apps DirectX x64 Remote
+2017-10-31 14:12:10,201 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,201 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,217 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,219 - __main__ - INFO - 10.1.15063.468
+2017-10-31 14:12:10,219 - __main__ - INFO - 1
+2017-10-31 14:12:10,234 - __main__ - INFO - {'DisplayVersion': u'11.7.0.1035', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Intel(R) Management Engine Components', 'createddate': '2017-10-31'}
+2017-10-31 14:12:10,237 - __main__ - INFO - 11.7.0.1035
+2017-10-31 14:12:10,259 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,267 - __main__ - INFO - 1
+2017-10-31 14:12:10,267 - __main__ - INFO - Intel(R) Management Engine Components
+2017-10-31 14:12:10,269 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,282 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Standard Library (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,286 - __main__ - INFO - Python 3.6.2 Standard Library (64-bit)
+2017-10-31 14:12:10,286 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,286 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,286 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,288 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,288 - __main__ - INFO - 1
+2017-10-31 14:12:10,305 - __main__ - INFO - {'DisplayName': u'Microsoft .NET Core SDK - 2.0.2 (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'8.0.39737', 'machine_id': 1}
+2017-10-31 14:12:10,306 - __main__ - INFO - Microsoft .NET Core SDK - 2.0.2 (x64)
+2017-10-31 14:12:10,308 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,308 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,308 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,308 - __main__ - INFO - 8.0.39737
+2017-10-31 14:12:10,308 - __main__ - INFO - 1
+2017-10-31 14:12:10,322 - __main__ - INFO - {'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:10,323 - __main__ - INFO - Intel(R) Management Engine Components
+2017-10-31 14:12:10,325 - __main__ - INFO - 20171009
+2017-10-31 14:12:10,325 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,326 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,326 - __main__ - INFO - 1.0.0.0
+2017-10-31 14:12:10,326 - __main__ - INFO - 1
+2017-10-31 14:12:10,344 - __main__ - INFO - {'DisplayName': u'Dell Update - SupportAssist Update Plugin', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.1.1.3832', 'machine_id': 1}
+2017-10-31 14:12:10,345 - __main__ - INFO - Dell Update - SupportAssist Update Plugin
+2017-10-31 14:12:10,345 - __main__ - INFO - 20170929
+2017-10-31 14:12:10,351 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,354 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,354 - __main__ - INFO - 3.1.1.3832
+2017-10-31 14:12:10,355 - __main__ - INFO - 1
+2017-10-31 14:12:10,371 - __main__ - INFO - {'DisplayName': u'Intel\xae Hardware Accelerated Execution Manager', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'6.2.0', 'machine_id': 1}
+2017-10-31 14:12:10,374 - __main__ - INFO - Intel® Hardware Accelerated Execution Manager
+2017-10-31 14:12:10,375 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,375 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,375 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,375 - __main__ - INFO - 6.2.0
+2017-10-31 14:12:10,377 - __main__ - INFO - 1
+2017-10-31 14:12:10,391 - __main__ - INFO - {'DisplayName': u'Java 8 Update 144 (64-bit)', 'InstallDate': u'20170925', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'8.0.1440.1', 'machine_id': 1}
+2017-10-31 14:12:10,392 - __main__ - INFO - Java 8 Update 144 (64-bit)
+2017-10-31 14:12:10,394 - __main__ - INFO - 20170925
+2017-10-31 14:12:10,397 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,397 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,398 - __main__ - INFO - 8.0.1440.1
+2017-10-31 14:12:10,398 - __main__ - INFO - 1
+2017-10-31 14:12:10,415 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Tcl/Tk Support (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,417 - __main__ - INFO - Python 3.6.2 Tcl/Tk Support (64-bit)
+2017-10-31 14:12:10,420 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,421 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,421 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,423 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,423 - __main__ - INFO - 1
+2017-10-31 14:12:10,437 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Standard Library (64-bit symbols)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,437 - __main__ - INFO - Python 3.6.2 Standard Library (64-bit symbols)
+2017-10-31 14:12:10,438 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,438 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,440 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,440 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,440 - __main__ - INFO - 1
+2017-10-31 14:12:10,453 - __main__ - INFO - {'DisplayName': u'Application Verifier x64 External Package', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.15063.468', 'machine_id': 1}
+2017-10-31 14:12:10,454 - __main__ - INFO - Application Verifier x64 External Package
+2017-10-31 14:12:10,457 - __main__ - INFO - 20170927
+2017-10-31 14:12:10,460 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,460 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,460 - __main__ - INFO - 10.1.15063.468
+2017-10-31 14:12:10,461 - __main__ - INFO - 1
+2017-10-31 14:12:10,476 - __main__ - INFO - {'DisplayName': u'Dell Data Vault', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'4.4.2.0', 'machine_id': 1}
+2017-10-31 14:12:10,477 - __main__ - INFO - Dell Data Vault
+2017-10-31 14:12:10,480 - __main__ - INFO - 20170902
+2017-10-31 14:12:10,480 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,480 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,480 - __main__ - INFO - 4.4.2.0
+2017-10-31 14:12:10,480 - __main__ - INFO - 1
+2017-10-31 14:12:10,496 - __main__ - INFO - {'DisplayName': u'Maxx Audio Installer (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.7.9233.1', 'machine_id': 1}
+2017-10-31 14:12:10,497 - __main__ - INFO - Maxx Audio Installer (x64)
+2017-10-31 14:12:10,500 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,503 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,506 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,507 - __main__ - INFO - 2.7.9233.1
+2017-10-31 14:12:10,507 - __main__ - INFO - 1
+2017-10-31 14:12:10,523 - __main__ - INFO - {'DisplayName': u'DiagnosticsHub_CollectionService', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.0.26823', 'machine_id': 1}
+2017-10-31 14:12:10,525 - __main__ - INFO - DiagnosticsHub_CollectionService
+2017-10-31 14:12:10,529 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,529 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,530 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,532 - __main__ - INFO - 15.0.26823
+2017-10-31 14:12:10,532 - __main__ - INFO - 1
+2017-10-31 14:12:10,546 - __main__ - INFO - {'DisplayVersion': u'15.7.5.1025', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Intel(R) Rapid Storage Technology', 'createddate': '2017-10-31'}
+2017-10-31 14:12:10,548 - __main__ - INFO - 15.7.5.1025
+2017-10-31 14:12:10,549 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,552 - __main__ - INFO - 1
+2017-10-31 14:12:10,553 - __main__ - INFO - Intel(R) Rapid Storage Technology
+2017-10-31 14:12:10,553 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,569 - __main__ - INFO - {'DisplayName': u'Dell Help & Support', 'InstallDate': u'20171025', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.5.23.0', 'machine_id': 1}
+2017-10-31 14:12:10,569 - __main__ - INFO - Dell Help & Support
+2017-10-31 14:12:10,571 - __main__ - INFO - 20171025
+2017-10-31 14:12:10,573 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,575 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,575 - __main__ - INFO - 2.5.23.0
+2017-10-31 14:12:10,576 - __main__ - INFO - 1
+2017-10-31 14:12:10,591 - __main__ - INFO - {'DisplayName': u'PuTTY release 0.70 (64-bit)', 'InstallDate': u'20170925', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'0.70.0.0', 'machine_id': 1}
+2017-10-31 14:12:10,591 - __main__ - INFO - PuTTY release 0.70 (64-bit)
+2017-10-31 14:12:10,592 - __main__ - INFO - 20170925
+2017-10-31 14:12:10,592 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,592 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,592 - __main__ - INFO - 0.70.0.0
+2017-10-31 14:12:10,594 - __main__ - INFO - 1
+2017-10-31 14:12:10,608 - __main__ - INFO - {'DisplayName': u'Windows SDK for Windows Store Apps DirectX x64 Remote', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.16299.15', 'machine_id': 1}
+2017-10-31 14:12:10,608 - __main__ - INFO - Windows SDK for Windows Store Apps DirectX x64 Remote
+2017-10-31 14:12:10,614 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,615 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,617 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,618 - __main__ - INFO - 10.1.16299.15
+2017-10-31 14:12:10,618 - __main__ - INFO - 1
+2017-10-31 14:12:10,634 - __main__ - INFO - {'DisplayName': u'Node.js', 'InstallDate': u'20170914', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'6.11.3', 'machine_id': 1}
+2017-10-31 14:12:10,637 - __main__ - INFO - Node.js
+2017-10-31 14:12:10,638 - __main__ - INFO - 20170914
+2017-10-31 14:12:10,638 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,638 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,640 - __main__ - INFO - 6.11.3
+2017-10-31 14:12:10,640 - __main__ - INFO - 1
+2017-10-31 14:12:10,654 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 pip Bootstrap (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,654 - __main__ - INFO - Python 3.6.2 pip Bootstrap (64-bit)
+2017-10-31 14:12:10,655 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,657 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,657 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,658 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,658 - __main__ - INFO - 1
+2017-10-31 14:12:10,674 - __main__ - INFO - {'DisplayName': u'Active Directory Authentication Library for SQL Server', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'13.1.4001.0', 'machine_id': 1}
+2017-10-31 14:12:10,676 - __main__ - INFO - Active Directory Authentication Library for SQL Server
+2017-10-31 14:12:10,676 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,677 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,677 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,678 - __main__ - INFO - 13.1.4001.0
+2017-10-31 14:12:10,680 - __main__ - INFO - 1
+2017-10-31 14:12:10,696 - __main__ - INFO - {'DisplayName': u'Microsoft ASP.NET Core 2.0.0 Runtime Package Store (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.0.11926.0', 'machine_id': 1}
+2017-10-31 14:12:10,700 - __main__ - INFO - Microsoft ASP.NET Core 2.0.0 Runtime Package Store (x64)
+2017-10-31 14:12:10,700 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,701 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,701 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,703 - __main__ - INFO - 2.0.11926.0
+2017-10-31 14:12:10,703 - __main__ - INFO - 1
+2017-10-31 14:12:10,720 - __main__ - INFO - {'DisplayName': u'Killer Network Manager', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.1.71.1354', 'machine_id': 1}
+2017-10-31 14:12:10,721 - __main__ - INFO - Killer Network Manager
+2017-10-31 14:12:10,721 - __main__ - INFO - 20170902
+2017-10-31 14:12:10,723 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,723 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,723 - __main__ - INFO - 1.1.71.1354
+2017-10-31 14:12:10,723 - __main__ - INFO - 1
+2017-10-31 14:12:10,737 - __main__ - INFO - {'DisplayVersion': u'3.06.007', 'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'Dell PremierColor', 'createddate': '2017-10-31'}
+2017-10-31 14:12:10,739 - __main__ - INFO - 3.06.007
+2017-10-31 14:12:10,740 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,740 - __main__ - INFO - 1
+2017-10-31 14:12:10,743 - __main__ - INFO - Dell PremierColor
+2017-10-31 14:12:10,753 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,769 - __main__ - INFO - {'DisplayName': u'Qualcomm Atheros Bluetooth Installer (64)', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.0.0.279', 'machine_id': 1}
+2017-10-31 14:12:10,769 - __main__ - INFO - Qualcomm Atheros Bluetooth Installer (64)
+2017-10-31 14:12:10,769 - __main__ - INFO - 20171017
+2017-10-31 14:12:10,770 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,770 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,773 - __main__ - INFO - 10.0.0.279
+2017-10-31 14:12:10,773 - __main__ - INFO - 1
+2017-10-31 14:12:10,788 - __main__ - INFO - {'DisplayName': u'Java SE Development Kit 8 Update 144 (64-bit)', 'InstallDate': u'20170925', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'8.0.1440.1', 'machine_id': 1}
+2017-10-31 14:12:10,789 - __main__ - INFO - Java SE Development Kit 8 Update 144 (64-bit)
+2017-10-31 14:12:10,789 - __main__ - INFO - 20170925
+2017-10-31 14:12:10,789 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,789 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,790 - __main__ - INFO - 8.0.1440.1
+2017-10-31 14:12:10,790 - __main__ - INFO - 1
+2017-10-31 14:12:10,805 - __main__ - INFO - {'DisplayName': u'Killer Wireless-AC Drivers', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.1.71.1354', 'machine_id': 1}
+2017-10-31 14:12:10,806 - __main__ - INFO - Killer Wireless-AC Drivers
+2017-10-31 14:12:10,808 - __main__ - INFO - 20170902
+2017-10-31 14:12:10,808 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,809 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,809 - __main__ - INFO - 1.1.71.1354
+2017-10-31 14:12:10,809 - __main__ - INFO - 1
+2017-10-31 14:12:10,823 - __main__ - INFO - {'DisplayName': u'Microsoft Web Deploy 3.6', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.0.1981', 'machine_id': 1}
+2017-10-31 14:12:10,823 - __main__ - INFO - Microsoft Web Deploy 3.6
+2017-10-31 14:12:10,825 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,826 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,828 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,828 - __main__ - INFO - 10.0.1981
+2017-10-31 14:12:10,828 - __main__ - INFO - 1
+2017-10-31 14:12:10,842 - __main__ - INFO - {'DisplayName': u'Microsoft ASP.NET Core Module for IIS Express', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.0.1982', 'machine_id': 1}
+2017-10-31 14:12:10,845 - __main__ - INFO - Microsoft ASP.NET Core Module for IIS Express
+2017-10-31 14:12:10,848 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,848 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,849 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,849 - __main__ - INFO - 1.0.1982
+2017-10-31 14:12:10,851 - __main__ - INFO - 1
+2017-10-31 14:12:10,865 - __main__ - INFO - {'DisplayName': u'Intel(R) Rapid Storage Technology', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.7.5.1025', 'machine_id': 1}
+2017-10-31 14:12:10,865 - __main__ - INFO - Intel(R) Rapid Storage Technology
+2017-10-31 14:12:10,865 - __main__ - INFO - 20170929
+2017-10-31 14:12:10,869 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,869 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,871 - __main__ - INFO - 15.7.5.1025
+2017-10-31 14:12:10,871 - __main__ - INFO - 1
+2017-10-31 14:12:10,885 - __main__ - INFO - {'DisplayName': u'icecap_collection_x64', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.0.26621', 'machine_id': 1}
+2017-10-31 14:12:10,887 - __main__ - INFO - icecap_collection_x64
+2017-10-31 14:12:10,888 - __main__ - INFO - 20170927
+2017-10-31 14:12:10,888 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,888 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,890 - __main__ - INFO - 15.0.26621
+2017-10-31 14:12:10,890 - __main__ - INFO - 1
+2017-10-31 14:12:10,904 - __main__ - INFO - {'DisplayName': u'Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.117.26914', 'machine_id': 1}
+2017-10-31 14:12:10,905 - __main__ - INFO - Microsoft Visual Studio Team Foundation Server 2017 RC Office Integration (x64)
+2017-10-31 14:12:10,907 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,907 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,907 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,907 - __main__ - INFO - 15.117.26914
+2017-10-31 14:12:10,907 - __main__ - INFO - 1
+2017-10-31 14:12:10,921 - __main__ - INFO - {'DisplayName': u'Microsoft Visual Studio 2017', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.12.111.1002', 'machine_id': 1}
+2017-10-31 14:12:10,923 - __main__ - INFO - Microsoft Visual Studio 2017
+2017-10-31 14:12:10,924 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,924 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,924 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,924 - __main__ - INFO - 1.12.111.1002
+2017-10-31 14:12:10,926 - __main__ - INFO - 1
+2017-10-31 14:12:10,940 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Test Suite (64-bit symbols)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,941 - __main__ - INFO - Python 3.6.2 Test Suite (64-bit symbols)
+2017-10-31 14:12:10,941 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,943 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,944 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,944 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,947 - __main__ - INFO - 1
+2017-10-31 14:12:10,963 - __main__ - INFO - {'DisplayName': u'VS JIT Debugger', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.71.0', 'machine_id': 1}
+2017-10-31 14:12:10,963 - __main__ - INFO - VS JIT Debugger
+2017-10-31 14:12:10,963 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,964 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,967 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,967 - __main__ - INFO - 16.0.71.0
+2017-10-31 14:12:10,969 - __main__ - INFO - 1
+2017-10-31 14:12:10,986 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Development Libraries (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:10,986 - __main__ - INFO - Python 3.6.2 Development Libraries (64-bit)
+2017-10-31 14:12:10,986 - __main__ - INFO - 20171020
+2017-10-31 14:12:10,987 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,989 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:10,989 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:10,992 - __main__ - INFO - 1
+2017-10-31 14:12:11,006 - __main__ - INFO - {'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,007 - __main__ - INFO - Intel(R) Management Engine Components
+2017-10-31 14:12:11,009 - __main__ - INFO - 20171009
+2017-10-31 14:12:11,009 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,009 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,009 - __main__ - INFO - 1.0.0.0
+2017-10-31 14:12:11,010 - __main__ - INFO - 1
+2017-10-31 14:12:11,025 - __main__ - INFO - {'DisplayName': u'Intel(R) Chipset Device Software', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.1.38', 'machine_id': 1}
+2017-10-31 14:12:11,026 - __main__ - INFO - Intel(R) Chipset Device Software
+2017-10-31 14:12:11,026 - __main__ - INFO - 20170902
+2017-10-31 14:12:11,030 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,032 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,032 - __main__ - INFO - 10.1.1.38
+2017-10-31 14:12:11,033 - __main__ - INFO - 1
+2017-10-31 14:12:11,052 - __main__ - INFO - {'DisplayName': u'Microsoft MPI (7.1.12437.25)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'7.1.12437.25', 'machine_id': 1}
+2017-10-31 14:12:11,055 - __main__ - INFO - Microsoft MPI (7.1.12437.25)
+2017-10-31 14:12:11,055 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,055 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,056 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,056 - __main__ - INFO - 7.1.12437.25
+2017-10-31 14:12:11,058 - __main__ - INFO - 1
+2017-10-31 14:12:11,072 - __main__ - INFO - {'DisplayName': u'Microsoft AS OLE DB Provider for SQL Server 2016', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'13.0.1601.5', 'machine_id': 1}
+2017-10-31 14:12:11,072 - __main__ - INFO - Microsoft AS OLE DB Provider for SQL Server 2016
+2017-10-31 14:12:11,072 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,075 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,075 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,075 - __main__ - INFO - 13.0.1601.5
+2017-10-31 14:12:11,075 - __main__ - INFO - 1
+2017-10-31 14:12:11,091 - __main__ - INFO - {'DisplayName': u'Office 16 Click-to-Run Licensing Component', 'InstallDate': u'20171021', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.8201.2200', 'machine_id': 1}
+2017-10-31 14:12:11,092 - __main__ - INFO - Office 16 Click-to-Run Licensing Component
+2017-10-31 14:12:11,092 - __main__ - INFO - 20171021
+2017-10-31 14:12:11,092 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,094 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,094 - __main__ - INFO - 16.0.8201.2200
+2017-10-31 14:12:11,095 - __main__ - INFO - 1
+2017-10-31 14:12:11,115 - __main__ - INFO - {'DisplayName': u'Office 16 Click-to-Run Extensibility Component', 'InstallDate': u'20171021', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.8201.2200', 'machine_id': 1}
+2017-10-31 14:12:11,118 - __main__ - INFO - Office 16 Click-to-Run Extensibility Component
+2017-10-31 14:12:11,121 - __main__ - INFO - 20171021
+2017-10-31 14:12:11,124 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,124 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,125 - __main__ - INFO - 16.0.8201.2200
+2017-10-31 14:12:11,125 - __main__ - INFO - 1
+2017-10-31 14:12:11,140 - __main__ - INFO - {'DisplayName': u'Office 16 Click-to-Run Localization Component', 'InstallDate': u'20170919', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.8201.2075', 'machine_id': 1}
+2017-10-31 14:12:11,140 - __main__ - INFO - Office 16 Click-to-Run Localization Component
+2017-10-31 14:12:11,141 - __main__ - INFO - 20170919
+2017-10-31 14:12:11,141 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,141 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,142 - __main__ - INFO - 16.0.8201.2075
+2017-10-31 14:12:11,145 - __main__ - INFO - 1
+2017-10-31 14:12:11,163 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Utility Scripts (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,163 - __main__ - INFO - Python 3.6.2 Utility Scripts (64-bit)
+2017-10-31 14:12:11,164 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,164 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,165 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,167 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,170 - __main__ - INFO - 1
+2017-10-31 14:12:11,184 - __main__ - INFO - {'DisplayName': u'Microsoft SQL Server 2016 LocalDB ', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'13.1.4001.0', 'machine_id': 1}
+2017-10-31 14:12:11,187 - __main__ - INFO - Microsoft SQL Server 2016 LocalDB 
+2017-10-31 14:12:11,187 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,187 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,188 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,190 - __main__ - INFO - 13.1.4001.0
+2017-10-31 14:12:11,190 - __main__ - INFO - 1
+2017-10-31 14:12:11,207 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Executables (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,207 - __main__ - INFO - Python 3.6.2 Executables (64-bit)
+2017-10-31 14:12:11,209 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,210 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,210 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,210 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,210 - __main__ - INFO - 1
+2017-10-31 14:12:11,226 - __main__ - INFO - {'DisplayName': u'Microsoft SQL Server 2012 Command Line Utilities ', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'11.3.6020.0', 'machine_id': 1}
+2017-10-31 14:12:11,226 - __main__ - INFO - Microsoft SQL Server 2012 Command Line Utilities 
+2017-10-31 14:12:11,226 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,227 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,229 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,229 - __main__ - INFO - 11.3.6020.0
+2017-10-31 14:12:11,230 - __main__ - INFO - 1
+2017-10-31 14:12:11,244 - __main__ - INFO - {'DisplayName': u'Intel(R) Management Engine Components', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,244 - __main__ - INFO - Intel(R) Management Engine Components
+2017-10-31 14:12:11,247 - __main__ - INFO - 20171009
+2017-10-31 14:12:11,249 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,250 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,250 - __main__ - INFO - 1.0.0.0
+2017-10-31 14:12:11,250 - __main__ - INFO - 1
+2017-10-31 14:12:11,266 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'12.0.21005', 'machine_id': 1}
+2017-10-31 14:12:11,266 - __main__ - INFO - Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005
+2017-10-31 14:12:11,266 - __main__ - INFO - 20170902
+2017-10-31 14:12:11,267 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,269 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,269 - __main__ - INFO - 12.0.21005
+2017-10-31 14:12:11,269 - __main__ - INFO - 1
+2017-10-31 14:12:11,283 - __main__ - INFO - {'DisplayName': u'Microsoft VC++ redistributables repacked.', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'12.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,286 - __main__ - INFO - Microsoft VC++ redistributables repacked.
+2017-10-31 14:12:11,286 - __main__ - INFO - 20171009
+2017-10-31 14:12:11,288 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,288 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,289 - __main__ - INFO - 12.0.0.0
+2017-10-31 14:12:11,289 - __main__ - INFO - 1
+2017-10-31 14:12:11,303 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Core Interpreter (64-bit symbols)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,305 - __main__ - INFO - Python 3.6.2 Core Interpreter (64-bit symbols)
+2017-10-31 14:12:11,309 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,309 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,311 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,312 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,312 - __main__ - INFO - 1
+2017-10-31 14:12:11,326 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Documentation (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,328 - __main__ - INFO - Python 3.6.2 Documentation (64-bit)
+2017-10-31 14:12:11,331 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,331 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,331 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,331 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,332 - __main__ - INFO - 1
+2017-10-31 14:12:11,345 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Tcl/Tk Support (64-bit symbols)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,348 - __main__ - INFO - Python 3.6.2 Tcl/Tk Support (64-bit symbols)
+2017-10-31 14:12:11,351 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,351 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,352 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,354 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,355 - __main__ - INFO - 1
+2017-10-31 14:12:11,368 - __main__ - INFO - {'DisplayName': u'Microsoft System CLR Types for SQL Server 2017 CTP2.1', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'14.0.600.250', 'machine_id': 1}
+2017-10-31 14:12:11,371 - __main__ - INFO - Microsoft System CLR Types for SQL Server 2017 CTP2.1
+2017-10-31 14:12:11,371 - __main__ - INFO - 20170927
+2017-10-31 14:12:11,372 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,372 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,374 - __main__ - INFO - 14.0.600.250
+2017-10-31 14:12:11,374 - __main__ - INFO - 1
+2017-10-31 14:12:11,388 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Test Suite (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:11,390 - __main__ - INFO - Python 3.6.2 Test Suite (64-bit)
+2017-10-31 14:12:11,391 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,394 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,404 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,405 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:11,407 - __main__ - INFO - 1
+2017-10-31 14:12:11,421 - __main__ - INFO - {'DisplayName': u'IIS 10.0 Express', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.0.1738', 'machine_id': 1}
+2017-10-31 14:12:11,423 - __main__ - INFO - IIS 10.0 Express
+2017-10-31 14:12:11,426 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,427 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,427 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,427 - __main__ - INFO - 10.0.1738
+2017-10-31 14:12:11,428 - __main__ - INFO - 1
+2017-10-31 14:12:11,447 - __main__ - INFO - {'DisplayName': u'Windows SDK DirectX x64 Remote', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.16299.15', 'machine_id': 1}
+2017-10-31 14:12:11,450 - __main__ - INFO - Windows SDK DirectX x64 Remote
+2017-10-31 14:12:11,450 - __main__ - INFO - 20171020
+2017-10-31 14:12:11,450 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,450 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,451 - __main__ - INFO - 10.1.16299.15
+2017-10-31 14:12:11,453 - __main__ - INFO - 1
+2017-10-31 14:12:11,467 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'12.0.21005', 'machine_id': 1}
+2017-10-31 14:12:11,467 - __main__ - INFO - Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005
+2017-10-31 14:12:11,469 - __main__ - INFO - 20170902
+2017-10-31 14:12:11,470 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,470 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,470 - __main__ - INFO - 12.0.21005
+2017-10-31 14:12:11,470 - __main__ - INFO - 1
+2017-10-31 14:12:11,486 - __main__ - INFO - {'DisplayName': u'VS Script Debugging Common', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.71.0', 'machine_id': 1}
+2017-10-31 14:12:11,486 - __main__ - INFO - VS Script Debugging Common
+2017-10-31 14:12:11,489 - __main__ - INFO - 20170927
+2017-10-31 14:12:11,490 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,490 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,490 - __main__ - INFO - 16.0.71.0
+2017-10-31 14:12:11,493 - __main__ - INFO - 1
+2017-10-31 14:12:11,509 - __main__ - INFO - {'updateddate': '2017-10-31', 'machine_id': 1, 'DisplayName': u'IIS Express Application Compatibility Database for x86', 'createddate': '2017-10-31'}
+2017-10-31 14:12:11,509 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,510 - __main__ - INFO - 1
+2017-10-31 14:12:11,512 - __main__ - INFO - IIS Express Application Compatibility Database for x86
+2017-10-31 14:12:11,513 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,529 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.11.25325', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'14.11.25325', 'machine_id': 1}
+2017-10-31 14:12:11,529 - __main__ - INFO - Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.11.25325
+2017-10-31 14:12:11,529 - __main__ - INFO - 20170927
+2017-10-31 14:12:11,530 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,532 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,532 - __main__ - INFO - 14.11.25325
+2017-10-31 14:12:11,533 - __main__ - INFO - 1
+2017-10-31 14:12:11,549 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2017 x64 Additional Runtime - 14.11.25325', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'14.11.25325', 'machine_id': 1}
+2017-10-31 14:12:11,549 - __main__ - INFO - Microsoft Visual C++ 2017 x64 Additional Runtime - 14.11.25325
+2017-10-31 14:12:11,551 - __main__ - INFO - 20170927
+2017-10-31 14:12:11,551 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,552 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,552 - __main__ - INFO - 14.11.25325
+2017-10-31 14:12:11,552 - __main__ - INFO - 1
+2017-10-31 14:12:11,568 - __main__ - INFO - {'DisplayName': u'Ansel', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'384.77', 'machine_id': 1}
+2017-10-31 14:12:11,568 - __main__ - INFO - Ansel
+2017-10-31 14:12:11,569 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,569 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,569 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,571 - __main__ - INFO - 384.77
+2017-10-31 14:12:11,572 - __main__ - INFO - 1
+2017-10-31 14:12:11,585 - __main__ - INFO - {'DisplayName': u'NVIDIA 3D Vision Driver 384.77', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'384.77', 'machine_id': 1}
+2017-10-31 14:12:11,586 - __main__ - INFO - NVIDIA 3D Vision Driver 384.77
+2017-10-31 14:12:11,588 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,588 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,588 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,589 - __main__ - INFO - 384.77
+2017-10-31 14:12:11,591 - __main__ - INFO - 1
+2017-10-31 14:12:11,605 - __main__ - INFO - {'DisplayName': u'NVIDIA Control Panel 384.77', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'384.77', 'machine_id': 1}
+2017-10-31 14:12:11,605 - __main__ - INFO - NVIDIA Control Panel 384.77
+2017-10-31 14:12:11,607 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,609 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,611 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,611 - __main__ - INFO - 384.77
+2017-10-31 14:12:11,611 - __main__ - INFO - 1
+2017-10-31 14:12:11,627 - __main__ - INFO - {'DisplayName': u'NVIDIA Graphics Driver 384.77', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'384.77', 'machine_id': 1}
+2017-10-31 14:12:11,628 - __main__ - INFO - NVIDIA Graphics Driver 384.77
+2017-10-31 14:12:11,630 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,635 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,638 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,638 - __main__ - INFO - 384.77
+2017-10-31 14:12:11,640 - __main__ - INFO - 1
+2017-10-31 14:12:11,653 - __main__ - INFO - {'DisplayName': u'NVIDIA GeForce Experience 3.6.0.74', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.0.74', 'machine_id': 1}
+2017-10-31 14:12:11,653 - __main__ - INFO - NVIDIA GeForce Experience 3.6.0.74
+2017-10-31 14:12:11,654 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,654 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,658 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,658 - __main__ - INFO - 3.6.0.74
+2017-10-31 14:12:11,660 - __main__ - INFO - 1
+2017-10-31 14:12:11,674 - __main__ - INFO - {'DisplayName': u'NVIDIA Optimus Update 25.0.0.0', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'25.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,676 - __main__ - INFO - NVIDIA Optimus Update 25.0.0.0
+2017-10-31 14:12:11,677 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,677 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,677 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,678 - __main__ - INFO - 25.0.0.0
+2017-10-31 14:12:11,678 - __main__ - INFO - 1
+2017-10-31 14:12:11,694 - __main__ - INFO - {'DisplayName': u'NVIDIA PhysX System Software 9.17.0329', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'9.17.0329', 'machine_id': 1}
+2017-10-31 14:12:11,694 - __main__ - INFO - NVIDIA PhysX System Software 9.17.0329
+2017-10-31 14:12:11,696 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,698 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,700 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,700 - __main__ - INFO - 9.17.0329
+2017-10-31 14:12:11,700 - __main__ - INFO - 1
+2017-10-31 14:12:11,716 - __main__ - INFO - {'DisplayName': u'NVIDIA Update 25.0.0.0', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'25.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,716 - __main__ - INFO - NVIDIA Update 25.0.0.0
+2017-10-31 14:12:11,717 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,717 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,717 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,719 - __main__ - INFO - 25.0.0.0
+2017-10-31 14:12:11,719 - __main__ - INFO - 1
+2017-10-31 14:12:11,733 - __main__ - INFO - {'DisplayName': u'SHIELD Streaming', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'7.1.0370', 'machine_id': 1}
+2017-10-31 14:12:11,734 - __main__ - INFO - SHIELD Streaming
+2017-10-31 14:12:11,736 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,736 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,736 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,737 - __main__ - INFO - 7.1.0370
+2017-10-31 14:12:11,739 - __main__ - INFO - 1
+2017-10-31 14:12:11,753 - __main__ - INFO - {'DisplayName': u'NVIDIA Install Application', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.1002.248.2111', 'machine_id': 1}
+2017-10-31 14:12:11,753 - __main__ - INFO - NVIDIA Install Application
+2017-10-31 14:12:11,755 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,755 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,756 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,756 - __main__ - INFO - 2.1002.248.2111
+2017-10-31 14:12:11,756 - __main__ - INFO - 1
+2017-10-31 14:12:11,770 - __main__ - INFO - {'DisplayName': u'NVIDIA Backend', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'25.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:11,772 - __main__ - INFO - NVIDIA Backend
+2017-10-31 14:12:11,773 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,773 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,773 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,775 - __main__ - INFO - 25.0.0.0
+2017-10-31 14:12:11,775 - __main__ - INFO - 1
+2017-10-31 14:12:11,792 - __main__ - INFO - {'DisplayName': u'NVIDIA Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,792 - __main__ - INFO - NVIDIA Container
+2017-10-31 14:12:11,793 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,795 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,795 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,796 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,796 - __main__ - INFO - 1
+2017-10-31 14:12:11,812 - __main__ - INFO - {'DisplayName': u'NVIDIA LocalSystem Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,812 - __main__ - INFO - NVIDIA LocalSystem Container
+2017-10-31 14:12:11,812 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,813 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,815 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,815 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,816 - __main__ - INFO - 1
+2017-10-31 14:12:11,832 - __main__ - INFO - {'DisplayName': u'NVIDIA Message Bus for NvContainer', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,832 - __main__ - INFO - NVIDIA Message Bus for NvContainer
+2017-10-31 14:12:11,834 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,834 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,835 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,835 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,836 - __main__ - INFO - 1
+2017-10-31 14:12:11,851 - __main__ - INFO - {'DisplayName': u'NVIDIA NetworkService Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,851 - __main__ - INFO - NVIDIA NetworkService Container
+2017-10-31 14:12:11,852 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,854 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,854 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,855 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,855 - __main__ - INFO - 1
+2017-10-31 14:12:11,871 - __main__ - INFO - {'DisplayName': u'NVIDIA Session Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,871 - __main__ - INFO - NVIDIA Session Container
+2017-10-31 14:12:11,871 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,872 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,874 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,875 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,875 - __main__ - INFO - 1
+2017-10-31 14:12:11,890 - __main__ - INFO - {'DisplayName': u'NVIDIA User Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:11,890 - __main__ - INFO - NVIDIA User Container
+2017-10-31 14:12:11,891 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,891 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,891 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,892 - __main__ - INFO - 1.4
+2017-10-31 14:12:11,894 - __main__ - INFO - 1
+2017-10-31 14:12:11,908 - __main__ - INFO - {'DisplayName': u'NVIDIA Display Container', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.2', 'machine_id': 1}
+2017-10-31 14:12:11,908 - __main__ - INFO - NVIDIA Display Container
+2017-10-31 14:12:11,911 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,911 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,913 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,913 - __main__ - INFO - 1.2
+2017-10-31 14:12:11,914 - __main__ - INFO - 1
+2017-10-31 14:12:11,927 - __main__ - INFO - {'DisplayName': u'NVIDIA Display Container LS', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.2', 'machine_id': 1}
+2017-10-31 14:12:11,927 - __main__ - INFO - NVIDIA Display Container LS
+2017-10-31 14:12:11,927 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,933 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,934 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,934 - __main__ - INFO - 1.2
+2017-10-31 14:12:11,934 - __main__ - INFO - 1
+2017-10-31 14:12:11,950 - __main__ - INFO - {'DisplayName': u'NVIDIA Display Watchdog Plugin', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.2', 'machine_id': 1}
+2017-10-31 14:12:11,950 - __main__ - INFO - NVIDIA Display Watchdog Plugin
+2017-10-31 14:12:11,951 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,953 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,953 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,953 - __main__ - INFO - 1.2
+2017-10-31 14:12:11,954 - __main__ - INFO - 1
+2017-10-31 14:12:11,970 - __main__ - INFO - {'DisplayName': u'NVIDIA Display Session Container', 'InstallDate': u'20171017', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.2', 'machine_id': 1}
+2017-10-31 14:12:11,970 - __main__ - INFO - NVIDIA Display Session Container
+2017-10-31 14:12:11,971 - __main__ - INFO - 20171017
+2017-10-31 14:12:11,973 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,973 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,973 - __main__ - INFO - 1.2
+2017-10-31 14:12:11,973 - __main__ - INFO - 1
+2017-10-31 14:12:11,986 - __main__ - INFO - {'DisplayName': u'NvNodejs', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.0.74', 'machine_id': 1}
+2017-10-31 14:12:11,987 - __main__ - INFO - NvNodejs
+2017-10-31 14:12:11,989 - __main__ - INFO - 20170929
+2017-10-31 14:12:11,990 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,990 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:11,992 - __main__ - INFO - 3.6.0.74
+2017-10-31 14:12:11,993 - __main__ - INFO - 1
+2017-10-31 14:12:12,020 - __main__ - INFO - {'DisplayName': u'NVIDIA Watchdog Plugin for NvContainer', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.4', 'machine_id': 1}
+2017-10-31 14:12:12,022 - __main__ - INFO - NVIDIA Watchdog Plugin for NvContainer
+2017-10-31 14:12:12,023 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,023 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,023 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,023 - __main__ - INFO - 1.4
+2017-10-31 14:12:12,025 - __main__ - INFO - 1
+2017-10-31 14:12:12,039 - __main__ - INFO - {'DisplayName': u'NvTelemetry', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.4.10.0', 'machine_id': 1}
+2017-10-31 14:12:12,039 - __main__ - INFO - NvTelemetry
+2017-10-31 14:12:12,040 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,042 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,042 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,042 - __main__ - INFO - 2.4.10.0
+2017-10-31 14:12:12,042 - __main__ - INFO - 1
+2017-10-31 14:12:12,059 - __main__ - INFO - {'DisplayName': u'NVIDIA Telemetry Container', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.4.10.0', 'machine_id': 1}
+2017-10-31 14:12:12,059 - __main__ - INFO - NVIDIA Telemetry Container
+2017-10-31 14:12:12,059 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,061 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,062 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,062 - __main__ - INFO - 2.4.10.0
+2017-10-31 14:12:12,063 - __main__ - INFO - 1
+2017-10-31 14:12:12,078 - __main__ - INFO - {'DisplayName': u'NvvHci', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.02.0.5', 'machine_id': 1}
+2017-10-31 14:12:12,078 - __main__ - INFO - NvvHci
+2017-10-31 14:12:12,082 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,082 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,082 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,082 - __main__ - INFO - 2.02.0.5
+2017-10-31 14:12:12,082 - __main__ - INFO - 1
+2017-10-31 14:12:12,098 - __main__ - INFO - {'DisplayName': u'Nvidia Share', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.0.74', 'machine_id': 1}
+2017-10-31 14:12:12,098 - __main__ - INFO - Nvidia Share
+2017-10-31 14:12:12,098 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,099 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,101 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,101 - __main__ - INFO - 3.6.0.74
+2017-10-31 14:12:12,101 - __main__ - INFO - 1
+2017-10-31 14:12:12,115 - __main__ - INFO - {'DisplayName': u'NVIDIA ShadowPlay 3.6.0.74', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.0.74', 'machine_id': 1}
+2017-10-31 14:12:12,117 - __main__ - INFO - NVIDIA ShadowPlay 3.6.0.74
+2017-10-31 14:12:12,117 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,118 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,118 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,118 - __main__ - INFO - 3.6.0.74
+2017-10-31 14:12:12,119 - __main__ - INFO - 1
+2017-10-31 14:12:12,134 - __main__ - INFO - {'DisplayName': u'SHIELD Wireless Controller Driver', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.0.74', 'machine_id': 1}
+2017-10-31 14:12:12,135 - __main__ - INFO - SHIELD Wireless Controller Driver
+2017-10-31 14:12:12,135 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,137 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,137 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,137 - __main__ - INFO - 3.6.0.74
+2017-10-31 14:12:12,138 - __main__ - INFO - 1
+2017-10-31 14:12:12,151 - __main__ - INFO - {'DisplayName': u'NVIDIA Update Core', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'25.0.0.0', 'machine_id': 1}
+2017-10-31 14:12:12,151 - __main__ - INFO - NVIDIA Update Core
+2017-10-31 14:12:12,153 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,154 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,154 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,155 - __main__ - INFO - 25.0.0.0
+2017-10-31 14:12:12,157 - __main__ - INFO - 1
+2017-10-31 14:12:12,171 - __main__ - INFO - {'DisplayName': u'NVIDIA Virtual Audio 3.70.2', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.70.2', 'machine_id': 1}
+2017-10-31 14:12:12,173 - __main__ - INFO - NVIDIA Virtual Audio 3.70.2
+2017-10-31 14:12:12,173 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,176 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,177 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,177 - __main__ - INFO - 3.70.2
+2017-10-31 14:12:12,177 - __main__ - INFO - 1
+2017-10-31 14:12:12,191 - __main__ - INFO - {'DisplayName': u'Microsoft Azure Compute Emulator - v2.9.5.3', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'2.9.8699.20', 'machine_id': 1}
+2017-10-31 14:12:12,191 - __main__ - INFO - Microsoft Azure Compute Emulator - v2.9.5.3
+2017-10-31 14:12:12,193 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,193 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,194 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,197 - __main__ - INFO - 2.9.8699.20
+2017-10-31 14:12:12,197 - __main__ - INFO - 1
+2017-10-31 14:12:12,213 - __main__ - INFO - {'DisplayName': u'Microsoft .NET Core Runtime - 2.0.0 (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.25521', 'machine_id': 1}
+2017-10-31 14:12:12,213 - __main__ - INFO - Microsoft .NET Core Runtime - 2.0.0 (x64)
+2017-10-31 14:12:12,217 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,217 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,220 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,220 - __main__ - INFO - 16.0.25521
+2017-10-31 14:12:12,220 - __main__ - INFO - 1
+2017-10-31 14:12:12,234 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2017 x64 Debug Runtime - 14.11.25325', 'InstallDate': u'20170927', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'14.11.25325', 'machine_id': 1}
+2017-10-31 14:12:12,236 - __main__ - INFO - Microsoft Visual C++ 2017 x64 Debug Runtime - 14.11.25325
+2017-10-31 14:12:12,236 - __main__ - INFO - 20170927
+2017-10-31 14:12:12,236 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,237 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,239 - __main__ - INFO - 14.11.25325
+2017-10-31 14:12:12,240 - __main__ - INFO - 1
+2017-10-31 14:12:12,253 - __main__ - INFO - {'DisplayName': u'Microsoft Azure Libraries for .NET \u2013 v2.9', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.0.0127.060', 'machine_id': 1}
+2017-10-31 14:12:12,253 - __main__ - INFO - Microsoft Azure Libraries for .NET – v2.9
+2017-10-31 14:12:12,256 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,256 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,256 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,259 - __main__ - INFO - 3.0.0127.060
+2017-10-31 14:12:12,259 - __main__ - INFO - 1
+2017-10-31 14:12:12,273 - __main__ - INFO - {'DisplayName': u'Microsoft .NET Core Host - 2.0.0 (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.25521', 'machine_id': 1}
+2017-10-31 14:12:12,276 - __main__ - INFO - Microsoft .NET Core Host - 2.0.0 (x64)
+2017-10-31 14:12:12,276 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,276 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,276 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,278 - __main__ - INFO - 16.0.25521
+2017-10-31 14:12:12,278 - __main__ - INFO - 1
+2017-10-31 14:12:12,292 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Executables (64-bit symbols)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:12,293 - __main__ - INFO - Python 3.6.2 Executables (64-bit symbols)
+2017-10-31 14:12:12,293 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,295 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,298 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,299 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:12,299 - __main__ - INFO - 1
+2017-10-31 14:12:12,312 - __main__ - INFO - {'DisplayName': u'Application Verifier x64 External Package', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.16299.15', 'machine_id': 1}
+2017-10-31 14:12:12,313 - __main__ - INFO - Application Verifier x64 External Package
+2017-10-31 14:12:12,315 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,315 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,315 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,316 - __main__ - INFO - 10.1.16299.15
+2017-10-31 14:12:12,316 - __main__ - INFO - 1
+2017-10-31 14:12:12,332 - __main__ - INFO - {'DisplayName': u'Microsoft Visual C++ 2010  x64 Redistributable - 10.0.30319', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.0.30319', 'machine_id': 1}
+2017-10-31 14:12:12,332 - __main__ - INFO - Microsoft Visual C++ 2010  x64 Redistributable - 10.0.30319
+2017-10-31 14:12:12,332 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,334 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,334 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,334 - __main__ - INFO - 10.0.30319
+2017-10-31 14:12:12,335 - __main__ - INFO - 1
+2017-10-31 14:12:12,348 - __main__ - INFO - {'DisplayName': u'Python 3.6.2 Core Interpreter (64-bit)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.6.2150.0', 'machine_id': 1}
+2017-10-31 14:12:12,349 - __main__ - INFO - Python 3.6.2 Core Interpreter (64-bit)
+2017-10-31 14:12:12,351 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,352 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,352 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,354 - __main__ - INFO - 3.6.2150.0
+2017-10-31 14:12:12,354 - __main__ - INFO - 1
+2017-10-31 14:12:12,368 - __main__ - INFO - {'DisplayName': u'Universal CRT Tools x64', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'10.1.16299.15', 'machine_id': 1}
+2017-10-31 14:12:12,368 - __main__ - INFO - Universal CRT Tools x64
+2017-10-31 14:12:12,369 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,371 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,372 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,372 - __main__ - INFO - 10.1.16299.15
+2017-10-31 14:12:12,374 - __main__ - INFO - 1
+2017-10-31 14:12:12,388 - __main__ - INFO - {'DisplayName': u'SketchUp 2017', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'17.2.2555', 'machine_id': 1}
+2017-10-31 14:12:12,388 - __main__ - INFO - SketchUp 2017
+2017-10-31 14:12:12,391 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,391 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,391 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,391 - __main__ - INFO - 17.2.2555
+2017-10-31 14:12:12,391 - __main__ - INFO - 1
+2017-10-31 14:12:12,408 - __main__ - INFO - {'DisplayName': u'Intel(R) ME UninstallLegacy', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.0.1.0', 'machine_id': 1}
+2017-10-31 14:12:12,408 - __main__ - INFO - Intel(R) ME UninstallLegacy
+2017-10-31 14:12:12,410 - __main__ - INFO - 20171009
+2017-10-31 14:12:12,411 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,411 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,411 - __main__ - INFO - 1.0.1.0
+2017-10-31 14:12:12,411 - __main__ - INFO - 1
+2017-10-31 14:12:12,427 - __main__ - INFO - {'DisplayName': u'Dell SupportAssist Remediation', 'InstallDate': u'20170929', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'3.1.1.3834', 'machine_id': 1}
+2017-10-31 14:12:12,427 - __main__ - INFO - Dell SupportAssist Remediation
+2017-10-31 14:12:12,430 - __main__ - INFO - 20170929
+2017-10-31 14:12:12,430 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,430 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,431 - __main__ - INFO - 3.1.1.3834
+2017-10-31 14:12:12,431 - __main__ - INFO - 1
+2017-10-31 14:12:12,446 - __main__ - INFO - {'DisplayName': u'VS WCF Debugging', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.71.0', 'machine_id': 1}
+2017-10-31 14:12:12,447 - __main__ - INFO - VS WCF Debugging
+2017-10-31 14:12:12,447 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,448 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,450 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,450 - __main__ - INFO - 16.0.71.0
+2017-10-31 14:12:12,450 - __main__ - INFO - 1
+2017-10-31 14:12:12,464 - __main__ - INFO - {'DisplayName': u'Microsoft .NET Core Host FX Resolver - 2.0.0 (x64)', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'16.0.25521', 'machine_id': 1}
+2017-10-31 14:12:12,466 - __main__ - INFO - Microsoft .NET Core Host FX Resolver - 2.0.0 (x64)
+2017-10-31 14:12:12,467 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,467 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,469 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,469 - __main__ - INFO - 16.0.25521
+2017-10-31 14:12:12,470 - __main__ - INFO - 1
+2017-10-31 14:12:12,483 - __main__ - INFO - {'DisplayName': u'paint.net', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'4.0.19', 'machine_id': 1}
+2017-10-31 14:12:12,484 - __main__ - INFO - paint.net
+2017-10-31 14:12:12,486 - __main__ - INFO - 20171009
+2017-10-31 14:12:12,486 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,487 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,489 - __main__ - INFO - 4.0.19
+2017-10-31 14:12:12,490 - __main__ - INFO - 1
+2017-10-31 14:12:12,503 - __main__ - INFO - {'DisplayName': u'IntelliTraceProfilerProxy', 'InstallDate': u'20171020', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'15.0.25.0', 'machine_id': 1}
+2017-10-31 14:12:12,503 - __main__ - INFO - IntelliTraceProfilerProxy
+2017-10-31 14:12:12,506 - __main__ - INFO - 20171020
+2017-10-31 14:12:12,507 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,507 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,509 - __main__ - INFO - 15.0.25.0
+2017-10-31 14:12:12,509 - __main__ - INFO - 1
+2017-10-31 14:12:12,523 - __main__ - INFO - {'DisplayName': u'Intel(R) Trusted Connect Service Client', 'InstallDate': u'20171009', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.45.447.1', 'machine_id': 1}
+2017-10-31 14:12:12,523 - __main__ - INFO - Intel(R) Trusted Connect Service Client
+2017-10-31 14:12:12,525 - __main__ - INFO - 20171009
+2017-10-31 14:12:12,526 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,526 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,529 - __main__ - INFO - 1.45.447.1
+2017-10-31 14:12:12,529 - __main__ - INFO - 1
+2017-10-31 14:12:12,546 - __main__ - INFO - {'DisplayName': u'DSC/AA Factory Installer', 'InstallDate': u'20170902', 'updateddate': '2017-10-31', 'createddate': '2017-10-31', 'DisplayVersion': u'1.3.6855.212', 'machine_id': 1}
+2017-10-31 14:12:12,546 - __main__ - INFO - DSC/AA Factory Installer
+2017-10-31 14:12:12,546 - __main__ - INFO - 20170902
+2017-10-31 14:12:12,549 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,549 - __main__ - INFO - 2017-10-31
+2017-10-31 14:12:12,549 - __main__ - INFO - 1.3.6855.212
+2017-10-31 14:12:12,551 - __main__ - INFO - 1
+2017-10-31 14:12:12,565 - __main__ - INFO - Logical Drives: C:\ 
+2017-10-31 14:12:12,602 - __main__ - INFO - (u'C:', '73.56% free')
+2017-10-31 14:12:12,604 - __main__ - INFO - Processor: Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+2017-10-31 14:12:12,604 - __main__ - INFO - Total RAM: 17GB
+2017-10-31 14:12:12,621 - __main__ - INFO - *** PROCESSING COMPLETE ***

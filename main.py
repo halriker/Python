@@ -1,5 +1,4 @@
 import win32api
-import win32con
 import os
 import sys
 import platform
@@ -10,57 +9,12 @@ import logging.config
 import yaml
 from _winreg import *
 import _winreg
-import errno
 import sqlite3
-from sqlite3 import Error
 import datetime
-
-
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
 else:
     import subprocess
-
-DBFILE = os.getcwd() + '\sqlite\pythonsqlite.db'
-
-sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
-    									id integer PRIMARY KEY,
-    									machine_name text NOT NULL UNIQUE,
-    									operating_system text NOT NULL,	
-    									domain_name text,
-    									user_name text,
-    									serial_no text,
-    									manufacteur text,
-    									family text,
-    									model text,
-    									bios_ver text,
-    									bios_rel_date text,
-    									created_date text NOT NULL,
-    									updated_date text NOT NULL
-    								); """
-
-sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
-                            id integer PRIMARY KEY,
-                            software_name text NOT NULL,
-                            version text,
-                            install_date text,
-                            created_date text NOT NULL,
-                            updated_date text NOT NULL,
-                            machine_id integer NOT NULL,
-                            FOREIGN KEY (machine_id) REFERENCES machine (id)
-                        ); """
-
-sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
-                                    id integer PRIMARY KEY,						
-                                    logical_drives text,
-                                    logical_drives_free_space text,
-                                    processor text,
-                                    physical_mem text,
-                                    machine_id integer NOT NULL,
-                                    created_date text NOT NULL,
-                                    updated_date text NOT NULL,
-                                    FOREIGN KEY (machine_id) REFERENCES machine (id)
-                                );"""
 
 
 class GetSysInformation:
@@ -156,7 +110,6 @@ class GetSysInformation:
         data = cursor.fetchall()
         if len(data) == 0:
             logger.info('*** Adding machine named %s to the database ***' % machine[0])
-            # self.machine[:0] = [idx]
             mt = tuple(machine)
             logger.info(len(machine))
             cursor.execute(sql, mt)
@@ -227,8 +180,8 @@ class GetSysInformation:
 
         sql = ''' INSERT INTO hardware(logical_drives,logical_drives_free_space,processor,physical_mem,machine_id,created_date,updated_date)
             VALUES(?,?,?,?,?,?,?) '''
-        self.hardware.append(SysObj.processor)
-        self.hardware.append(SysObj.ramtot)
+        self.hardware.append(self.processor)
+        self.hardware.append(self.ramtot)
         self.hardware.append(machine_id)
         createddate = datetime.date.today()
         updateddate = datetime.date.today()
@@ -293,7 +246,7 @@ class GetSysInformation:
 
     @staticmethod
     def setup_logging():
-        default_path = 'logging.yaml'
+        default_path = './sqlite/logging.yaml'
         default_level = logging.INFO
         env_key = LOG_CFG
         """Setup logging configuration"""
@@ -375,17 +328,6 @@ class GetSysInformation:
     def getmacinfo(self):
         print 'Mac'
         self.macplatform = platform.mac_ver()
-        # # !/bin/bash
-        # SERIAL = ` / bin / grep
-        # Serial / proc / cpuinfo | / usr / bin / awk
-        # '{print $3}'
-        # `
-        # MAC = ` / bin / ip
-        # link
-        # show
-        # eth0 | / usr / bin / awk
-        # '/ether/ {print $2}'
-        # `
         print 'break'
         subprocess.call(['ioreg', '-l', '|', 'grep', 'IOPlatformSerialNumber'])
         print 'subprocess'
@@ -466,14 +408,55 @@ class GetSysInformation:
 
 if __name__ == '__main__':
 
-    LOG_CFG = 'C:/Users/hal.riker.SEMA4GENOMICS/PycharmProjects/SysInfo/logging.yaml'
+    LOG_CFG = os.getcwd() + '\sqlite\logging.yaml'
+    DBFILE = os.getcwd() + '\sqlite\pythonsqlite.db'
+
+    sql_create_machine_table = """ CREATE TABLE IF NOT EXISTS machine (
+                                id integer PRIMARY KEY,
+                                machine_name text NOT NULL UNIQUE,
+                                operating_system text NOT NULL,	
+                                domain_name text,
+                                user_name text,
+                                serial_no text,
+                                manufacteur text,
+                                family text,
+                                model text,
+                                bios_ver text,
+                                bios_rel_date text,
+                                created_date text NOT NULL,
+                                updated_date text NOT NULL
+                            ); """
+
+    sql_create_software_table = """ CREATE TABLE IF NOT EXISTS software (
+                                id integer PRIMARY KEY,
+                                software_name text NOT NULL,
+                                version text,
+                                install_date text,
+                                created_date text NOT NULL,
+                                updated_date text NOT NULL,
+                                machine_id integer NOT NULL,
+                                FOREIGN KEY (machine_id) REFERENCES machine (id)
+                            ); """
+
+    sql_create_hardware_table = """CREATE TABLE IF NOT EXISTS hardware (
+                                id integer PRIMARY KEY,						
+                                logical_drives text,
+                                logical_drives_free_space text,
+                                processor text,
+                                physical_mem text,
+                                machine_id integer NOT NULL,
+                                created_date text NOT NULL,
+                                updated_date text NOT NULL,
+                                FOREIGN KEY (machine_id) REFERENCES machine (id)
+                            );"""
+
     # Instantiate GetSysInformation Object
     SysObj = GetSysInformation()
     SysObj.setup_logging()
     logger = logging.getLogger(__name__)
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
-    logger.info(DBFILE)
+    logger.info('DBFILE Path: ' + DBFILE)
     SysObj.getsysinfo()
     # create machine table
     SysObj.create_table(sql_create_machine_table)
