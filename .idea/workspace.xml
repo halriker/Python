@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c888dc-6eee-4319-96b9-a2ffffba434b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logging.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pythonsqlite.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sqlite/pythonsqlite.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_ctypes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_hashlib.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_socket.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_sqlite3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_ssl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_win32sysloader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/_yaml.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/bz2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/pyexpat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/select.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/unicodedata.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/win32api.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/win32evtlog.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/win32pipe.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.win-amd64/winexe/temp/win32ui.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/sqlite/pythonsqlite.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/info - Copy.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/library.zip" afterPath="$PROJECT_DIR$/dist/library.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/main.exe" afterPath="$PROJECT_DIR$/dist/main.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/info.log" afterPath="$PROJECT_DIR$/dist/info.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors.log" afterPath="$PROJECT_DIR$/errors.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info.log" afterPath="$PROJECT_DIR$/info.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -22,8 +40,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="108" column="50" lean-forward="false" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -31,83 +49,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logging.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sqlite/logging.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="glob.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/glob.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ntpath.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/ntpath.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1106">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16324">
+            <state relative-caret-position="96">
               <caret line="1166" column="0" lean-forward="false" selection-start-line="1166" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21854">
-              <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
+            <state relative-caret-position="82">
+              <caret line="499" column="0" lean-forward="false" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subprocess.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/subprocess.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/encodings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10206">
-              <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="errors.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/errors.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="96">
+              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,6 +92,7 @@
     <findStrings>
       <find>domain</find>
       <find>nir</find>
+      <find>Error</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,11 +113,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
-    <option name="y" value="-15" />
-    <option name="width" value="3873" />
-    <option name="height" value="2073" />
+    <option name="width" value="3858" />
+    <option name="height" value="2055" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -187,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -204,7 +171,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,18 +258,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="-5" width="1291" height="691" extended-state="6" />
+    <frame x="-5" y="0" width="1286" height="685" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14817813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25609756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32269505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32007232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34397164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46654612" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -339,14 +305,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>249</line>
-          <option name="timeStamp" value="200" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="201" />
+      <option name="time" value="271" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -356,60 +315,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15028">
-          <caret line="442" column="106" lean-forward="false" selection-start-line="442" selection-start-column="55" selection-end-line="442" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/errors.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/getpass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5134">
-          <caret line="151" column="35" lean-forward="false" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7480">
-          <caret line="253" column="40" lean-forward="true" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53074">
-          <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24786">
           <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -417,23 +326,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logging.yaml" />
     <entry file="file://$PROJECT_DIR$/errors.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,7 +365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24786">
           <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -473,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53074">
           <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,23 +379,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logging.yaml" />
     <entry file="file://$PROJECT_DIR$/errors.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39520">
           <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41000">
           <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/wmi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="1144" column="0" lean-forward="false" selection-start-line="1144" selection-start-column="0" selection-end-line="1144" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/getpass.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2114">
@@ -629,83 +509,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10206">
-          <caret line="729" column="0" lean-forward="false" selection-start-line="729" selection-start-column="0" selection-end-line="729" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logging.yaml" />
     <entry file="file://$PROJECT_DIR$/errors.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlite/pythonsqlite.db-journal" />
-    <entry file="file://$PROJECT_DIR$/sqlite/pythonsqlite.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="31" column="66" lean-forward="true" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16324">
-          <caret line="1166" column="0" lean-forward="false" selection-start-line="1166" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21854">
-          <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite/pythonsqlite.db" />
     <entry file="file://$PROJECT_DIR$/info.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102928">
           <caret line="7352" column="0" lean-forward="false" selection-start-line="7352" selection-start-column="0" selection-end-line="7352" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hello.py" />
     <entry file="file://C:/Python27/Lib/glob.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="1344">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,32 +538,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/win32com/client/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/wmi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="202">
           <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlite/logging.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="252">
           <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/urllib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="1296" column="0" lean-forward="false" selection-start-line="1296" selection-start-column="0" selection-end-line="1296" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="441" column="0" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/encodings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="499" column="0" lean-forward="false" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="1166" column="0" lean-forward="false" selection-start-line="1166" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="108" column="50" lean-forward="false" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

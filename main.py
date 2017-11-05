@@ -36,6 +36,9 @@ class GetSysInformation:
         self.machine.append(self.osbuild)
         self.processor = platform.processor()
         self.drives = None
+        self.hdencrypt = None
+        self.fileHandle = None
+        self.blfile = None
 
         # Windows Attributes
         self.HKEY_LOCAL_MACHINE = 'HKEY_LOCAL_MACHINE'
@@ -74,7 +77,6 @@ class GetSysInformation:
         cursor = conn.cursor()
         return conn, cursor
 
-
     def create_table(self, create_table_sql):
         """ create a table from the create_table_sql statement
         :param create_table_sql: a CREATE TABLE statement
@@ -98,12 +100,13 @@ class GetSysInformation:
         if conn is None:
             logger.info("Could not get connection")
             sys.exit()
+        hd_encryption = SysObj.get_bitlocker()
         createddate = datetime.date.today()
         updateddate = datetime.date.today()
-        self.machine.extend([str(createddate), str(updateddate)])
+        self.machine.extend([str(hd_encryption), str(createddate), str(updateddate)])
 
-        sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,serial_no,manufacteur,family,model,bios_ver,bios_rel_date,created_date,updated_date) 
-                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?) '''
+        sql = ''' INSERT INTO machine(machine_name,operating_system,domain_name,user_name,serial_no,manufacteur,family,model,bios_ver,bios_rel_date,hd_encryption,created_date,updated_date) 
+                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) '''
 
         cursor.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machine[0],))
         logger.info(machine[0])
@@ -111,7 +114,6 @@ class GetSysInformation:
         if len(data) == 0:
             logger.info('*** Adding machine named %s to the database ***' % machine[0])
             mt = tuple(machine)
-            logger.info(len(machine))
             cursor.execute(sql, mt)
             return cursor.lastrowid
         else:
@@ -141,7 +143,7 @@ class GetSysInformation:
 
             # obtain the value of the key
             for key, value in d.iteritems():
-                logger.info(value)
+                # logger.info(value)
                 # Add to value to list so it is ordered? or array?
                 if key == 'DisplayName':
                     dnv = value
@@ -277,7 +279,6 @@ class GetSysInformation:
         for info in bios_info:
             return info.SerialNumber
 
-
     @staticmethod
     def get_free_disk_space():
         c = wmi.WMI()
@@ -354,18 +355,26 @@ class GetSysInformation:
         conv = ramtotbytes/1000000000
         self.ramtot = str(conv)
 
+    def openfile(self):
+
+        try:
+            self.blfile = open(file, 'w')
+        except:
+            logger.info('bad file')
+
     def get_bitlocker(self):
-        admin = self.check_creds()
-        if admin:
-            # self.bitlocker = subprocess.call(['manage-bde', '-status'])
-            logger.info('admin')
-        else:
-            x = subprocess.Popen(['nircmdc', 'elevate', 'cmd'], stdout=subprocess.PIPE)
-            cmdpid = x.pid
-            logger.log('The console PID: ' + str(cmdpid))
-            x.communicate(['cmd.exe', '/C', 'manage-bde', '-status'])
-            logger.log('f')
-            self.bitlocker = ""
+
+        import codecs
+
+        blfile = os.getcwd() + "\\bloutfile.txt"
+        proc = subprocess.Popen(["nircmdc.exe", "elevatecmd", "runassystem", "cmd", "/k", "wmic /namespace:\\\\root\cimv2\security\microsoftvolumeencryption path Win32_EncryptableVolume get IsVolumeInitializedForProtection", ">", blfile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.blfile = blfile
+
+        f = codecs.open(blfile, 'r', encoding='utf_16_le')
+        data_f = f.readlines()
+        names_f = data_f.pop(1).split(' ')  # take the first line.
+        self.hdencrypt = names_f[0]
+        return names_f[0]
 
     def getSoftwareList(self, machineid):
 
@@ -379,17 +388,11 @@ class GetSysInformation:
             value = self.get_values(path, ['DisplayName', 'DisplayVersion', 'InstallDate'])
 
             if value:
-                logger.info(value)
+                # logger.info(value)
                 value['createddate'] = str(createddate)
                 value['updateddate'] = str(updateddate)
                 value['machine_id'] = mid
                 self.instsoft.extend([value])
-
-    def openFile(self):
-        try:
-            self.fileHandle = open(self.FILE_PATH,'w')
-        except:
-            print "Exceptions in openFile"
 
     def preparefile(self,printCaption,printString):
         try:
@@ -423,6 +426,7 @@ if __name__ == '__main__':
                                 model text,
                                 bios_ver text,
                                 bios_rel_date text,
+                                hd_encryption,
                                 created_date text NOT NULL,
                                 updated_date text NOT NULL
                             ); """
@@ -468,6 +472,7 @@ if __name__ == '__main__':
     # Log Machine Info
     logger.info('Computer Name: ' + SysObj.machname)
     logger.info('Operating System: ' + SysObj.osbuild)
+    logger.info('Hard Drive Encryption: ' + str(SysObj.hdencrypt))
     logger.info('Domain Name: ' + SysObj.DomainName)
     logger.info('User Name: ' + SysObj.UserName)
     logger.info('The servie tag is ' + SysObj.get_service_tag())
@@ -491,4 +496,7 @@ if __name__ == '__main__':
     logger.info('Processor: ' + SysObj.processor)
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
     SysObj.add_hardware(SysObj.hardware)
+    logger.info('*** BitLocker Check ***')
+    # SysObj.get_bitlocker()
+    logger.info('*** THE HARD DRIVE ENCRYPTION = ' + SysObj.hdencrypt + ' ***')
     logger.info('*** PROCESSING COMPLETE ***')
