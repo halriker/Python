@@ -33,6 +33,7 @@ wheels/
 
 # logs
 *.log
+*.txt
 
 # Installer logs
 pip-log.txt
