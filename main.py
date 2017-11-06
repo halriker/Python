@@ -69,6 +69,26 @@ class GetSysInformation:
         # Mac Specific Attributes
         self.macplatform = None
 
+    #################################################################################
+    # Enable WMI on client and open firewall                                        #
+    #   1. Add a registry key to disable UAC for remote connections.                #
+    #   2. Firewall update to allow WMI, remote admin and File and Printer Sharing  #
+    #   3. Disable simple file sharing.                                             #
+    #################################################################################
+
+    def client_mods(self):
+        # Step 1
+        keystr = r'SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+        sub_key = "LocalAccountTokenFilterPolicy"
+        regadd = subprocess.Popen(['nircmdc.exe', "elevate", "cmd", "/K", "reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1"])
+        rpid = regadd.pid
+        logger.info('CMD PID: ' + str(rpid))
+        # Kill CMD PID???????
+
+        #Step 2
+        
+
+
     # Database Methods
 
     def get_connection(self):
@@ -461,6 +481,7 @@ if __name__ == '__main__':
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
     logger.info('DBFILE Path: ' + DBFILE)
+    SysObj.client_mods()
     SysObj.getsysinfo()
     # create machine table
     SysObj.create_table(sql_create_machine_table)
