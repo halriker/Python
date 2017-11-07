@@ -11,6 +11,7 @@ from _winreg import *
 import _winreg
 import sqlite3
 import datetime
+from time import sleep
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
 else:
@@ -85,9 +86,7 @@ class GetSysInformation:
         logger.info('CMD PID: ' + str(rpid))
         # Kill CMD PID???????
 
-        #Step 2
-        
-
+        # Step 2
 
     # Database Methods
 
@@ -120,7 +119,7 @@ class GetSysInformation:
         if conn is None:
             logger.info("Could not get connection")
             sys.exit()
-        hd_encryption = SysObj.get_bitlocker()
+        hd_encryption = self.get_bitlocker()
         createddate = datetime.date.today()
         updateddate = datetime.date.today()
         self.machine.extend([str(hd_encryption), str(createddate), str(updateddate)])
@@ -129,7 +128,6 @@ class GetSysInformation:
                   VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) '''
 
         cursor.execute("SELECT machine_name FROM machine WHERE machine_name = ?", (machine[0],))
-        logger.info(machine[0])
         data = cursor.fetchall()
         if len(data) == 0:
             logger.info('*** Adding machine named %s to the database ***' % machine[0])
@@ -335,7 +333,6 @@ class GetSysInformation:
         self.dellservtag = self.get_service_tag()
         self.machine.extend([self.DomainName, self.UserName, self.dellservtag])
         self.get_bios()
-        # self.get_bitlocker()
         # Add to hardware tuple variable
         self.drives = win32api.GetLogicalDriveStrings()
         self.dfs = self.get_free_disk_space()
@@ -388,13 +385,19 @@ class GetSysInformation:
 
         blfile = os.getcwd() + "\\bloutfile.txt"
         proc = subprocess.Popen(["nircmdc.exe", "elevatecmd", "runassystem", "cmd", "/k", "wmic /namespace:\\\\root\cimv2\security\microsoftvolumeencryption path Win32_EncryptableVolume get IsVolumeInitializedForProtection", ">", blfile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        self.blfile = blfile
-
-        f = codecs.open(blfile, 'r', encoding='utf_16_le')
-        data_f = f.readlines()
-        names_f = data_f.pop(1).split(' ')  # take the first line.
-        self.hdencrypt = names_f[0]
-        return names_f[0]
+        sleep(5)
+        poll = proc.poll()
+        if poll is None:
+            logger.info('Subprocess Still Running')
+        elif poll is not None:
+            f = codecs.open(blfile, 'r', encoding='utf_16_le')
+            data_f = f.readlines()
+            data_f.pop(0).split(' ')  # take the first line.
+            names_f = data_f[0]
+            bitv = names_f[0:6]
+            bitval = bitv.rstrip()
+            self.hdencrypt = bitval
+            return bitval
 
     def getSoftwareList(self, machineid):
 
@@ -481,7 +484,6 @@ if __name__ == '__main__':
     logger.info('Logging Configuration File Path: ' + LOG_CFG)
     logger.info('Logging Setup Complete')
     logger.info('DBFILE Path: ' + DBFILE)
-    SysObj.client_mods()
     SysObj.getsysinfo()
     # create machine table
     SysObj.create_table(sql_create_machine_table)
@@ -493,7 +495,6 @@ if __name__ == '__main__':
     # Log Machine Info
     logger.info('Computer Name: ' + SysObj.machname)
     logger.info('Operating System: ' + SysObj.osbuild)
-    logger.info('Hard Drive Encryption: ' + str(SysObj.hdencrypt))
     logger.info('Domain Name: ' + SysObj.DomainName)
     logger.info('User Name: ' + SysObj.UserName)
     logger.info('The servie tag is ' + SysObj.get_service_tag())
@@ -504,12 +505,10 @@ if __name__ == '__main__':
     logger.info('BIOS Release Date: ' + SysObj.biosrel)
 
     # Add PC to machine table
+    logger.info('*** BitLocker Check ***')
     machinex = SysObj.machine
     machine_id = SysObj.add_machine(machinex)
-    # Get installed software and add to software table
-    SysObj.getSoftwareList(machine_id)
-    software = SysObj.instsoft
-    SysObj.add_software(software, machine_id)
+    logger.info('*** THE HARD DRIVE ENCRYPTION = ' + SysObj.hdencrypt + ' ***')
     # INSERT HARDWARE INTO hardware table
     logger.info('Logical Drives: ' + SysObj.drives)
     # Parse dfs to just percent as string
@@ -517,7 +516,8 @@ if __name__ == '__main__':
     logger.info('Processor: ' + SysObj.processor)
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
     SysObj.add_hardware(SysObj.hardware)
-    logger.info('*** BitLocker Check ***')
-    # SysObj.get_bitlocker()
-    logger.info('*** THE HARD DRIVE ENCRYPTION = ' + SysObj.hdencrypt + ' ***')
+    # Get installed software and add to software table
+    SysObj.getSoftwareList(machine_id)
+    software = SysObj.instsoft
+    SysObj.add_software(software, machine_id)
     logger.info('*** PROCESSING COMPLETE ***')
