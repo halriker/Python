@@ -2,8 +2,13 @@ from distutils.core import setup
 import py2exe
 import os
 import glob
+import sys
 
-def find_data_files(source,target,patterns):
+sys.argv.append("py2exe")
+sys.argv.append("-q")
+
+
+def find_data_files(source, target, patterns):
     """Locates the specified data-files and returns the matches
     in a data_files compatible format.
     source is the root of the source data tree.
@@ -17,12 +22,12 @@ def find_data_files(source,target,patterns):
         raise ValueError("Magic not allowed in src, target")
     ret = {}
     for pattern in patterns:
-        pattern = os.path.join(source,pattern)
+        pattern = os.path.join(source, pattern)
         for filename in glob.glob(pattern):
             if os.path.isfile(filename):
-                targetpath = os.path.join(target,os.path.relpath(filename,source))
+                targetpath = os.path.join(target, os.path.relpath(filename,source))
                 path = os.path.dirname(targetpath)
-                ret.setdefault(path,[]).append(filename)
+                ret.setdefault(path, []).append(filename)
     return sorted(ret.items())
 
 
@@ -32,7 +37,7 @@ setup(
         description="Cross-Platform application to gather system hardware and software information",
         author="Hal Riker",
         console=['main.py'],
-        includes=['sqlite3', 'wmi', 'yaml', 'subprocess32', 'os', 'logging'],
+        includes=['sqlite3', 'wmi', 'yaml', 'subprocess32', 'os', 'logging', 'codecs', 'time', 'Carbon', 'Carbon.Files', '_posixsubprocess', '_scproxy', '_sysconfigdata', 'winreg'],
         data_files=find_data_files('sqlite', 'sqlite', [
             './*',
         ]),

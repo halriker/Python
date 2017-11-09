@@ -12,6 +12,7 @@ import _winreg
 import sqlite3
 import datetime
 from time import sleep
+import codecs
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess
 else:
@@ -119,7 +120,10 @@ class GetSysInformation:
         if conn is None:
             logger.info("Could not get connection")
             sys.exit()
+        else:
+            logger.info('*** Database Connection Successful ***')
         hd_encryption = self.get_bitlocker()
+        logger.info('*** BITLOCKER ENCRYPTION VALUE = ' + hd_encryption)
         createddate = datetime.date.today()
         updateddate = datetime.date.today()
         self.machine.extend([str(hd_encryption), str(createddate), str(updateddate)])
@@ -139,11 +143,10 @@ class GetSysInformation:
             logger.warn('*** EXITING THE SCRIPT ***')
             sys.exit()
 
-    def add_software(self, sw, machid):
+    def add_software(self, sw):
         """
         Add Software for machine
         :param sw:
-        :param machid:
         :return:
         """
 
@@ -151,18 +154,17 @@ class GetSysInformation:
         if conn is None:
             logger.info("Could not get connection")
             sys.exit()
+        else:
+            logger.info('*** Database Connection Successful: Software Insert *** ')
 
-        sql = ''' INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id)
-            VALUES (?,?,?,?,?,?) '''
+        sql = ''' INSERT INTO software(software_name,version,install_date,created_date,updated_date,machine_id) VALUES (?,?,?,?,?,?) '''
         logger.info('SQL INSERT for software: ' + sql)
         # Iterate through software list of dictionaries
-        for d in software:
-            logger.info(d)
-
+        for d in sw:
             # obtain the value of the key
             for key, value in d.iteritems():
                 # logger.info(value)
-                # Add to value to list so it is ordered? or array?
+                # Add value to list so it is ordered? or array?
                 if key == 'DisplayName':
                     dnv = value
                 elif key == 'DisplayVersion':
@@ -180,10 +182,14 @@ class GetSysInformation:
                 elif key == 'createddate':
                     cd = value
                 elif key == 'machine_id':
-                    mid = value
-            sqlval = [dnv, dvv, instd, cd, upd, mid]
+                    machidx = value
+            sqlval = [dnv, dvv, instd, cd, upd, machidx]
             sqlvaltup = tuple(sqlval)
-            cursor.execute(sql, sqlvaltup)
+            self.software.append(sqlvaltup)
+        conn.executemany(sql, self.software)
+        for row in conn.execute("select * from software"):
+            logger.info(row)
+        logger.info('Software Insert Complete')
         return cursor.lastrowid
 
     def add_hardware(self, hw):
@@ -372,19 +378,15 @@ class GetSysInformation:
         conv = ramtotbytes/1000000000
         self.ramtot = str(conv)
 
-    def openfile(self):
-
-        try:
-            self.blfile = open(file, 'w')
-        except:
-            logger.info('bad file')
-
     def get_bitlocker(self):
 
-        import codecs
-
-        blfile = os.getcwd() + "\\bloutfile.txt"
-        proc = subprocess.Popen(["nircmdc.exe", "elevatecmd", "runassystem", "cmd", "/k", "wmic /namespace:\\\\root\cimv2\security\microsoftvolumeencryption path Win32_EncryptableVolume get IsVolumeInitializedForProtection", ">", blfile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        blfile = os.getcwd() + r"\bloutfile.txt"
+        if os.path.isfile(blfile):
+            os.remove(blfile)
+        else:
+            logger.info('File Added: ' + blfile)
+        logger.info('Bitlocker Encryption Output File ' + blfile)
+        proc = subprocess.Popen(['nircmdc.exe', "elevate", "cmd", "/k", "wmic /namespace:\\\\root\cimv2\security\microsoftvolumeencryption path Win32_EncryptableVolume where DriveLetter='C:' get ProtectionStatus", ">", blfile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         sleep(5)
         poll = proc.poll()
         if poll is None:
@@ -392,14 +394,12 @@ class GetSysInformation:
         elif poll is not None:
             f = codecs.open(blfile, 'r', encoding='utf_16_le')
             data_f = f.readlines()
-            data_f.pop(0).split(' ')  # take the first line.
-            names_f = data_f[0]
-            bitv = names_f[0:6]
-            bitval = bitv.rstrip()
-            self.hdencrypt = bitval
-            return bitval
+            data_f.pop(0)  # take the first line.
+            value_f = data_f[0].rstrip()
+            self.hdencrypt = value_f
+            return value_f
 
-    def getSoftwareList(self, machineid):
+    def getsoftwarelist(self, machineid):
 
         key = r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
         createddate = datetime.date.today()
@@ -508,7 +508,6 @@ if __name__ == '__main__':
     logger.info('*** BitLocker Check ***')
     machinex = SysObj.machine
     machine_id = SysObj.add_machine(machinex)
-    logger.info('*** THE HARD DRIVE ENCRYPTION = ' + SysObj.hdencrypt + ' ***')
     # INSERT HARDWARE INTO hardware table
     logger.info('Logical Drives: ' + SysObj.drives)
     # Parse dfs to just percent as string
@@ -517,7 +516,7 @@ if __name__ == '__main__':
     logger.info('Total RAM: ' + SysObj.ramtot + 'GB')
     SysObj.add_hardware(SysObj.hardware)
     # Get installed software and add to software table
-    SysObj.getSoftwareList(machine_id)
-    software = SysObj.instsoft
-    SysObj.add_software(software, machine_id)
+    SysObj.getsoftwarelist(machine_id)
+    sw = SysObj.instsoft
+    SysObj.add_software(sw)
     logger.info('*** PROCESSING COMPLETE ***')
